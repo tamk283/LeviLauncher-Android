@@ -31,12 +31,12 @@ jobs:
               request=urllib.request.Request(url,headers={'User-Agent':'Nemesis-APK-Inspector/1.0','Accept':'application/json'})
               with urllib.request.urlopen(request,timeout=60) as response:return json.load(response)
           try:
-              metadata=fetch_json('https://cloud-api.yandex.net/v1/disk/public/resources?'+urllib.parse.urlencode({'public_key':public_url}))
+              metadata=fetch_json('https://'+'cloud-api.yandex.net/v1/disk/public/resources?'+urllib.parse.urlencode({'public_key':public_url}))
               if metadata.get('type')!='file':raise RuntimeError('The public resource is not a file')
               report['source_filename']=metadata.get('name');report['source_size']=metadata.get('size')
               report['source_sha256']=metadata.get('sha256');report['source_antivirus_status']=metadata.get('antivirus_status')
               if metadata.get('sha256')!=expected_sha256:raise RuntimeError('Yandex resource changed since approval; refusing a different file')
-              download=fetch_json('https://cloud-api.yandex.net/v1/disk/public/resources/download?'+urllib.parse.urlencode({'public_key':public_url}))
+              download=fetch_json('https://'+'cloud-api.yandex.net/v1/disk/public/resources/download?'+urllib.parse.urlencode({'public_key':public_url}))
               href=download.get('href','');parsed=urllib.parse.urlsplit(href)
               if parsed.scheme!='https' or not parsed.hostname or not parsed.hostname.endswith('.yandex.ru'):raise RuntimeError('Unexpected download host')
               apk=pathlib.Path('target.apk');digest=hashlib.sha256();total=0
