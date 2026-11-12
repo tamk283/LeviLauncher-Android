@@ -1,8 +1,8 @@
-name: Inspect Minecraft 1.26.60.4 library
+name: Analyze Minecraft 1.26.60.4 internals
 on:
   push:
     branches: [native-research-26.60.28]
-    paths: ['.github/workflows/native-library-probe.yml']
+    paths: ['.github/workflows/native-library-probe.yml', 'research/deep-analyze.py', 'research/arm64-string-xrefs.cpp', 'research/signature-candidates.json']
   workflow_dispatch:
 permissions:
   contents: write
@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - uses: actions/checkout@v4
+      - name: Prepare static analysis tools
+        run: |
+          python3 -m pip install --target .analysisdeps pyelftools==0.32 capstone==5.0.6
+          g++ -O2 -std=c++17 research/arm64-string-xrefs.cpp -o arm64-string-xrefs
       - name: Download approved Yandex APK and inspect without executing game code
         shell: bash
         run: |
@@ -98,11 +103,15 @@ jobs:
               report['status']='inspection failed';report['error']=type(error).__name__+': '+str(error)
               save();print(json.dumps(report,ensure_ascii=False,indent=2));sys.exit(1)
           PY
+      - name: Analyze internal strings and ARM64 cross references
+        env:
+          PYTHONPATH: .analysisdeps
+        run: python3 research/deep-analyze.py libminecraftpe.so probe research/signature-candidates.json ./arm64-string-xrefs
       - name: Upload inspection report only
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: minecraft-1.26.60.4-native-inspection
+          name: minecraft-1.26.60.4-deep-analysis
           path: probe/
           retention-days: 7
       - name: Save sanitized result for review
@@ -112,12 +121,15 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: |
           test -f probe/report.json || exit 0
-          export REPORT_SHA="$(gh api "repos/$GH_REPO/contents/research/yandex-1.26.60.4-result.json?ref=native-research-26.60.28" --jq .sha 2>/dev/null || true)"
+          export REPORT_SHA="$(gh api "repos/$GH_REPO/contents/research/yandex-1.26.60.4-deep-result.json?ref=native-research-26.60.28" --jq .sha 2>/dev/null || true)"
           python3 - <<'PY'
           import pathlib,json,base64,os
           report=json.loads(pathlib.Path('probe/report.json').read_text())
+          deep=pathlib.Path('probe/deep-report.json')
+          if deep.exists():report['deep_analysis']=json.loads(deep.read_text())
+          else:report['deep_analysis']={'status':'not completed; inspect workflow diagnostics'}
           request={'message':'Save approved 1.26.60.4 inspection result [skip ci]','branch':'native-research-26.60.28','content':base64.b64encode(json.dumps(report,ensure_ascii=False,indent=2).encode()).decode()}
           if os.environ.get('REPORT_SHA'):request['sha']=os.environ['REPORT_SHA']
           pathlib.Path('request.json').write_text(json.dumps(request))
           PY
-          gh api "repos/$GH_REPO/contents/research/yandex-1.26.60.4-result.json" --method PUT --input request.json
+          gh api "repos/$GH_REPO/contents/research/yandex-1.26.60.4-deep-result.json" --method PUT --input request.json
