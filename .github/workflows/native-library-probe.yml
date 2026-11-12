@@ -1,4 +1,4 @@
-name: Inspect Minecraft 26.60.28 library
+name: Inspect Minecraft 1.26.60.4 library
 on:
   push:
     branches: [native-research-26.60.28]
@@ -11,58 +11,65 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Download and inspect APK without executing it
+      - name: Download approved Yandex APK and inspect without executing game code
         shell: bash
         run: |
           mkdir -p probe
           python3 -u - <<'PY'
-          import os,sys,json,hashlib,zipfile,struct,subprocess,pathlib,urllib.request,urllib.parse,http.cookiejar,glob,shutil,time
+          import os,sys,json,hashlib,zipfile,struct,subprocess,pathlib,urllib.request,urllib.parse,glob,shutil,re
           root=pathlib.Path('probe')
-          report={'source':'https://mcpehub.org/engine/getfile.php?id=56139','source_page':'https://mcpehub.org/engine/dlfile.php?id=56139','expected_version':'26.60.28','game_code_executed':False}
+          public_url='https://disk.yandex.ru/d/3fDsypq1gIWjsg'
+          expected_sha256='d5e1d008c7aa7d578b0ee66afa29458bb3742e33e17f680e6133db35e5a9990f'
+          report={'source':public_url,'expected_version':'1.26.60.4','game_code_executed':False,'public_link_use_approved':True}
           def save():
               text=json.dumps(report,ensure_ascii=False,indent=2)
               (root/'report.json').write_text(text)
-              (root/'report.md').write_text('# Native library inspection\n\n```json\n'+text+'\n```\n')
+              (root/'report.md').write_text('# Minecraft 1.26.60.4 native inspection\n\n```json\n'+text+'\n```\n')
               if os.environ.get('GITHUB_STEP_SUMMARY'):
                   with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write((root/'report.md').read_text())
+          def fetch_json(url):
+              request=urllib.request.Request(url,headers={'User-Agent':'Nemesis-APK-Inspector/1.0','Accept':'application/json'})
+              with urllib.request.urlopen(request,timeout=60) as response:return json.load(response)
           try:
-              headers={'User-Agent':'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36','Referer':report['source_page']}
-              opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-              with opener.open(urllib.request.Request(report['source_page'],headers=headers),timeout=40) as r:r.read(2000000)
-              time.sleep(3)
+              metadata=fetch_json('https://cloud-api.yandex.net/v1/disk/public/resources?'+urllib.parse.urlencode({'public_key':public_url}))
+              if metadata.get('type')!='file':raise RuntimeError('The public resource is not a file')
+              report['source_filename']=metadata.get('name');report['source_size']=metadata.get('size')
+              report['source_sha256']=metadata.get('sha256');report['source_antivirus_status']=metadata.get('antivirus_status')
+              if metadata.get('sha256')!=expected_sha256:raise RuntimeError('Yandex resource changed since approval; refusing a different file')
+              download=fetch_json('https://cloud-api.yandex.net/v1/disk/public/resources/download?'+urllib.parse.urlencode({'public_key':public_url}))
+              href=download.get('href','');parsed=urllib.parse.urlsplit(href)
+              if parsed.scheme!='https' or not parsed.hostname or not parsed.hostname.endswith('.yandex.ru'):raise RuntimeError('Unexpected download host')
               apk=pathlib.Path('target.apk');digest=hashlib.sha256();total=0
-              with opener.open(urllib.request.Request(report['source'],headers=headers),timeout=120) as response:
-                  report['download_host']=urllib.parse.urlsplit(response.url).hostname
+              with urllib.request.urlopen(urllib.request.Request(href,headers={'User-Agent':'Mozilla/5.0'}),timeout=120) as response:
                   report['content_type']=response.headers.get('Content-Type')
-                  report['content_disposition']=response.headers.get('Content-Disposition')
                   with apk.open('wb') as output:
                       while True:
                           chunk=response.read(1024*1024)
                           if not chunk:break
                           total+=len(chunk)
-                          if total>1536*1024*1024:raise RuntimeError('APK exceeds 1.5 GiB limit')
+                          if total>1536*1024*1024:raise RuntimeError('APK exceeds 1.5 GiB inspection limit')
                           digest.update(chunk);output.write(chunk)
                           if total%(64*1024*1024)==0:print('Downloaded MiB:',total//1024//1024,flush=True)
               report['apk_size']=total;report['apk_sha256']=digest.hexdigest()
-              if not zipfile.is_zipfile(apk):raise RuntimeError('Download endpoint returned a non-APK response')
+              if digest.hexdigest()!=expected_sha256:raise RuntimeError('Downloaded APK checksum differs from approved resource')
+              if not zipfile.is_zipfile(apk):raise RuntimeError('Downloaded file is not an APK/ZIP')
               sdk=os.environ.get('ANDROID_HOME') or os.environ.get('ANDROID_SDK_ROOT') or '/usr/local/lib/android/sdk'
               tools=sorted(glob.glob(sdk+'/build-tools/*/aapt2'),reverse=True)
               aapt=shutil.which('aapt2') or (tools[0] if tools else None)
-              if aapt:
-                  result=subprocess.run([aapt,'dump','badging',str(apk)],capture_output=True,text=True,timeout=90)
-                  (root/'apk-badging.txt').write_text(result.stdout[:200000]+'\n'+result.stderr[:2000])
-                  package=next((line for line in result.stdout.splitlines() if line.startswith('package:')),'')
-                  report['package_metadata']=package
-                  if not package:report['version_verification']='unverified: package metadata unavailable'
-                  elif "name='com.mojang.minecraftpe'" not in package:raise RuntimeError('Unexpected package identifier')
-                  elif "versionName='26.60.28" in package or "versionName='1.26.60.28" in package:report['version_verification']='matches expected version prefix'
-                  else:raise RuntimeError('Package version does not match target 26.60.28')
-              else:report['version_verification']='unverified: aapt2 unavailable'
+              if not aapt:raise RuntimeError('aapt2 unavailable; exact version verification is required')
+              result=subprocess.run([aapt,'dump','badging',str(apk)],capture_output=True,text=True,timeout=90)
+              (root/'apk-badging.txt').write_text(result.stdout[:200000]+'\n'+result.stderr[:2000])
+              package=next((line for line in result.stdout.splitlines() if line.startswith('package:')),'')
+              report['package_metadata']=package
+              if "name='com.mojang.minecraftpe'" not in package:raise RuntimeError('Unexpected Android package identifier')
+              match=re.search(r"versionName='([^']+)'",package)
+              if not match or match.group(1)!='1.26.60.4':raise RuntimeError('APK manifest version is not exactly 1.26.60.4')
+              report['verified_version']=match.group(1)
               with zipfile.ZipFile(apk) as archive:
                   report['native_library_paths']=[n for n in archive.namelist() if n.endswith('/libminecraftpe.so')]
                   target='lib/arm64-v8a/libminecraftpe.so'
                   if target not in archive.namelist():raise RuntimeError('No ARM64 library in this APK')
-                  if archive.getinfo(target).file_size>2*1024*1024*1024:raise RuntimeError('Library exceeds 2 GiB limit')
+                  if archive.getinfo(target).file_size>2*1024*1024*1024:raise RuntimeError('Library exceeds 2 GiB inspection limit')
                   lib=pathlib.Path('libminecraftpe.so');digest=hashlib.sha256()
                   with archive.open(target) as source,lib.open('wb') as output:
                       while True:
@@ -70,45 +77,47 @@ jobs:
                           if not chunk:break
                           digest.update(chunk);output.write(chunk)
               with lib.open('rb') as f:elf=f.read(64)
-              if elf[:4]!=b'\x7fELF' or elf[4]!=2 or elf[5]!=1 or struct.unpack_from('<H',elf,18)[0]!=183:raise RuntimeError('Library is not an AArch64 ELF')
+              if elf[:4]!=b'\x7fELF' or elf[4]!=2 or elf[5]!=1 or struct.unpack_from('<H',elf,18)[0]!=183:raise RuntimeError('Library is not 64-bit little-endian AArch64 ELF')
               report['library_sha256']=digest.hexdigest();report['library_size']=lib.stat().st_size;report['library_architecture']='AArch64 / arm64-v8a'
-              elf_info=subprocess.run(['readelf','-h',str(lib)],capture_output=True,text=True,timeout=60)
-              (root/'elf-header.txt').write_text(elf_info.stdout)
+              elf_info=subprocess.run(['readelf','-h','-n',str(lib)],capture_output=True,text=True,timeout=60)
+              (root/'elf-header-and-notes.txt').write_text(elf_info.stdout[:200000])
+              build_id=re.search(r'Build ID:\s*([a-fA-F0-9]+)',elf_info.stdout)
+              if build_id:report['elf_build_id']=build_id.group(1)
               nm=subprocess.run(['nm','-D','--defined-only','-C',str(lib)],capture_output=True,text=True,timeout=180)
-              symbols=nm.stdout.splitlines();report['exported_symbol_count']=len(symbols)
+              report['nm_exit_code']=nm.returncode;report['nm_stderr']=nm.stderr[:2000]
+              symbols=nm.stdout.splitlines();report['exported_symbol_count']=len(symbols);report['exported_symbol_preview']=symbols[:30]
               terms=['LocalPlayer','ClientInstance','LevelRenderer','getRuntimeID','getPosition','getActor','getEntity','getLevel','worldToScreen','getFov','setSprinting','getNameTag','ScreenContext','ActorRender']
               matches=[line for line in symbols if any(term in line for term in terms)]
               (root/'candidate-symbols.txt').write_text('\n'.join(matches[:10000]))
               report['candidate_symbol_count']=len(matches);report['candidate_preview']=matches[:40]
-              report['status']='library extracted and inspected; APK not executed'
-              report['trust_warning']='Third-party APK. Hashes identify the file but do not prove official authenticity. Not installed or executed.'
-              report['retention']='Only metadata and candidate-symbol reports are published; no proprietary APK or library.'
+              report['status']='library extracted and inspected; APK not installed or executed'
+              report['trust_warning']='User-provided APK. Resource checksum verified, but official Mojang signing certificate has not been established.'
+              report['retention']='Only metadata and symbol reports are published. APK and native binary are not uploaded.'
               save();print(json.dumps(report,ensure_ascii=False,indent=2))
           except Exception as error:
               report['status']='inspection failed';report['error']=type(error).__name__+': '+str(error)
               save();print(json.dumps(report,ensure_ascii=False,indent=2));sys.exit(1)
           PY
-      - name: Upload inspection report (no game binaries)
+      - name: Upload inspection report only
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: minecraft-26.60.28-native-inspection
+          name: minecraft-1.26.60.4-native-inspection
           path: probe/
           retention-days: 7
-      - name: Save sanitized result for source review
+      - name: Save sanitized result for review
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
           test -f probe/report.json || exit 0
-          export REPORT_SHA="$(gh api "repos/$GH_REPO/contents/research/library-probe-result.json?ref=native-research-26.60.28" --jq .sha 2>/dev/null || true)"
+          export REPORT_SHA="$(gh api "repos/$GH_REPO/contents/research/yandex-1.26.60.4-result.json?ref=native-research-26.60.28" --jq .sha 2>/dev/null || true)"
           python3 - <<'PY'
           import pathlib,json,base64,os
           report=json.loads(pathlib.Path('probe/report.json').read_text())
-          report.pop('response_preview',None)
-          request={'message':'Save native library inspection result [skip ci]','branch':'native-research-26.60.28','content':base64.b64encode(json.dumps(report,ensure_ascii=False,indent=2).encode()).decode()}
+          request={'message':'Save approved 1.26.60.4 inspection result [skip ci]','branch':'native-research-26.60.28','content':base64.b64encode(json.dumps(report,ensure_ascii=False,indent=2).encode()).decode()}
           if os.environ.get('REPORT_SHA'):request['sha']=os.environ['REPORT_SHA']
           pathlib.Path('request.json').write_text(json.dumps(request))
           PY
-          gh api "repos/$GH_REPO/contents/research/library-probe-result.json" --method PUT --input request.json
+          gh api "repos/$GH_REPO/contents/research/yandex-1.26.60.4-result.json" --method PUT --input request.json
