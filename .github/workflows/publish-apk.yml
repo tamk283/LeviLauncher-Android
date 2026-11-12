@@ -1,0 +1,31 @@
+name: Publish downloadable APK
+on:
+  push:
+    branches: [standalone-build]
+    paths: [.github/workflows/publish-apk.yml]
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Download successful APK artifact
+        run: |
+          set -euo pipefail
+          gh run download 43266490175 --name standalone-debug-apk --dir apk
+          find apk -type f -name '*.apk' | grep -q .
+      - name: Publish direct APK download
+        run: |
+          set -euo pipefail
+          mapfile -d '' apks < <(find apk -type f -name '*.apk' -print0)
+          if gh release view standalone-debug-1 >/dev/null 2>&1; then
+            gh release upload standalone-debug-1 "${apks[@]}" --clobber
+          else
+            gh release create standalone-debug-1 "${apks[@]}" --target dd7c0429b40eb727b86df6b90c74d9244ed2955b --prerelease --title 'Standalone launcher — test APK' --notes 'Debug APK from successful build 43266490175. Based on LeviLauncher Android; upstream attribution and license retained. Discord integration disabled. ESP is not implemented. Not yet tested on a physical device. Requires the official licensed Minecraft installation. No game APK is included.'
+          fi
