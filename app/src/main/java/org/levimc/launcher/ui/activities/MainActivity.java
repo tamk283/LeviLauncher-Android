@@ -130,7 +130,7 @@ import okhttp3.OkHttpClient;
         setupNavBar();
         setupManagersAndHandlers();
         if (!isInstanceShortcutIntent()) {
-            new GithubReleaseUpdater(this, "LiteLDev", "LeviLauncher-Android", permissionResultLauncher).checkUpdateOnLaunch();
+            // Nemesis updates are distributed separately from upstream.
         }
         showEulaIfNeeded();
         setupOnBackPressedCallback();
@@ -702,7 +702,7 @@ import okhttp3.OkHttpClient;
     }
 
     private void showRandomTip() {
-        String[] tips = getResources().getStringArray(R.array.launcher_tips);
+        String[] tips = getResources().getStringArray(R.array.nemesis_tips);
         if (tips.length == 0 || binding.tipText == null) return;
         binding.tipText.setText(tips[new java.util.Random().nextInt(tips.length)]);
         android.os.Handler handler = new android.os.Handler(getMainLooper());

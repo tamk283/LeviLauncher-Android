@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nemesis_name" translatable="false">Nemesis</string>
+    <string name="nemesis_subtitle" translatable="false">ANDROID / BEDROCK</string>
+    <string-array name="nemesis_tips">
+        <item>Nemesis · based on LeviLauncher Android / LeviMC</item>
+    </string-array>
+</resources>
