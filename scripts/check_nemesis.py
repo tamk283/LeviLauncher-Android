@@ -18,3 +18,14 @@ for required in ('setAllowFileAccess(false)', 'setAllowContentAccess(false)', 'M
 assert 'serializedAuthManager' not in bridge, 'Never send account credentials to the HTML layer'
 assert 'NemesisGameOverlay(this)' in (root/'app/src/main/java/org/levimc/launcher/core/minecraft/MinecraftActivity.kt').read_text()
 print('Nemesis integration checks passed: manifest, routing, assets, native launch/login, built-in modules and origin restrictions.')
+
+probe = (root/'app/src/main/java/org/levimc/launcher/nemesis/NemesisLibraryProbe.java').read_text()
+assert '4e7f97ecf1989edfaa7ca4805acc907a63bd4c56f1b1965079b2c47f63e3a7c4' in probe
+assert 'eb291b883dfdfaff70c4999c2eabd61885ae3e15' in probe
+assert '/proc/self/mem' not in probe
+assert '"diagnostics": runDiagnostics()' in bridge
+assert '.put("hooksVerified", false).put("espReady", false)' in bridge
+assert '"esp"' not in bridge.split('private static final Set<String> IDS', 1)[1].split('private final Activity', 1)[0]
+client = (root/'app/src/main/assets/nemesis/client.html').read_text()
+assert 'runtimeDiagnostics' in client and 'showDiagnostics' in client
+print('Read-only runtime diagnostics and disabled ESP safeguards verified.')

@@ -47,6 +47,8 @@ public final class NemesisWebController {
     private volatile boolean destroyed;
     private volatile VersionManager versions;
     private boolean launching;
+    private boolean diagnosticRunning;
+    private JSONObject runtimeDiagnostics = new JSONObject();
 
     @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
     public NemesisWebController(Activity activity, boolean inGame, Runnable close) {
@@ -137,6 +139,7 @@ public final class NemesisWebController {
         try {
             JSONObject data = new JSONObject();
             data.put("inGame", inGame);
+            data.put("diagnostics", runtimeDiagnostics);
             data.put("account", account == null ? JSONObject.NULL : new JSONObject().put("name",
                     account.minecraftUsername != null ? account.minecraftUsername : account.xboxGamertag));
             JSONArray installed = new JSONArray();
@@ -184,6 +187,7 @@ public final class NemesisWebController {
     private void dispatch(String method, JSONObject input) throws Exception {
         switch (method) {
             case "refresh": refresh(); break;
+            case "diagnostics": runDiagnostics(); break;
             case "login":
                 if (!inGame) activity.startActivityForResult(new Intent(activity, MsftLoginActivity.class), 0x4e45);
                 break;
@@ -222,6 +226,32 @@ public final class NemesisWebController {
             }
             default: break;
         }
+    }
+    private void runDiagnostics() throws Exception {
+        if (destroyed || diagnosticRunning || worker.isShutdown()) return;
+        diagnosticRunning = true;
+        runtimeDiagnostics = new JSONObject().put("status", "running").put("targetVersion", NemesisLibraryProbe.TARGET_VERSION);
+        emit("diagnostics", runtimeDiagnostics);
+        worker.execute(() -> {
+            JSONObject data = new JSONObject();
+            try {
+                NemesisLibraryProbe.Result result = NemesisLibraryProbe.probe(inGame);
+                data.put("status", result.status).put("targetVersion", NemesisLibraryProbe.TARGET_VERSION)
+                    .put("loaded", result.loaded).put("architecture", result.architecture)
+                    .put("buildId", result.buildId).put("sha256", result.sha256)
+                    .put("fileSize", result.fileSize).put("fileMatches", result.fileMatches)
+                    .put("hooksVerified", false).put("espReady", false);
+            } catch (Exception ignored) {
+                try { data.put("status", "read_error"); } catch (Exception unused) { }
+            }
+            JSONObject completed = data;
+            activity.runOnUiThread(() -> {
+                if (destroyed) return;
+                diagnosticRunning = false;
+                runtimeDiagnostics = completed;
+                emit("diagnostics", completed);
+            });
+        });
     }
     private void launchGame() {
         if (inGame || launching) return;
