@@ -1,0 +1,3605 @@
+{
+  "source": "https://disk.yandex.ru/d/3fDsypq1gIWjsg",
+  "expected_version": "1.26.60.4",
+  "game_code_executed": false,
+  "public_link_use_approved": true,
+  "source_filename": "Minecraft PE 1.26.60.4 v8a.apk",
+  "source_size": 766737551,
+  "source_sha256": "d5e1d008c7aa7d578b0ee66afa29458bb3742e33e17f680e6133db35e5a9990f",
+  "source_antivirus_status": "not-scanned",
+  "content_type": "application/vnd.android.package-archive",
+  "apk_size": 766737551,
+  "apk_sha256": "d5e1d008c7aa7d578b0ee66afa29458bb3742e33e17f680e6133db35e5a9990f",
+  "package_metadata": "package: name='com.mojang.minecraftpe' versionCode='972606004' versionName='1.26.60.4' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+  "verified_version": "1.26.60.4",
+  "native_library_paths": [
+    "lib/arm64-v8a/libminecraftpe.so"
+  ],
+  "library_sha256": "4e7f97ecf1989edfaa7ca4805acc907a63bd4c56f1b1965079b2c47f63e3a7c4",
+  "library_size": 342231392,
+  "library_architecture": "AArch64 / arm64-v8a",
+  "elf_build_id": "eb291b883dfdfaff70c4999c2eabd61885ae3e15",
+  "nm_exit_code": 0,
+  "nm_stderr": "",
+  "exported_symbol_count": 90670,
+  "exported_symbol_preview": [
+    "000000000823ece8 T AB64ToARGB",
+    "000000000825147c T AB64ToARGBRow_C",
+    "0000000008250a7c T ABGRToAR30Row_C",
+    "000000000823e55c T ABGRToARGB",
+    "00000000082366e8 T ABGRToI420",
+    "0000000008252e18 T ABGRToUVJRow_C",
+    "0000000008251f50 T ABGRToUVRow_C",
+    "0000000008252ca8 T ABGRToYJRow_C",
+    "0000000008251dd8 T ABGRToYRow_C",
+    "0000000008863984 T ACCESS_DESCRIPTION_free",
+    "00000000137653d0 D ACCESS_DESCRIPTION_it",
+    "0000000008863978 T ACCESS_DESCRIPTION_new",
+    "0000000008865ff8 T ADMISSIONS_free",
+    "0000000008866598 T ADMISSIONS_get0_admissionAuthority",
+    "00000000088665cc T ADMISSIONS_get0_namingAuthority",
+    "0000000008866608 T ADMISSIONS_get0_professionInfos",
+    "00000000137662a0 D ADMISSIONS_it",
+    "0000000008865fec T ADMISSIONS_new",
+    "00000000088665a0 T ADMISSIONS_set0_admissionAuthority",
+    "00000000088665d4 T ADMISSIONS_set0_namingAuthority",
+    "0000000008866610 T ADMISSIONS_set0_professionInfos",
+    "0000000008866028 T ADMISSION_SYNTAX_free",
+    "0000000008866528 T ADMISSION_SYNTAX_get0_admissionAuthority",
+    "000000000886655c T ADMISSION_SYNTAX_get0_contentsOfAdmissions",
+    "0000000013766328 D ADMISSION_SYNTAX_it",
+    "000000000886601c T ADMISSION_SYNTAX_new",
+    "0000000008866530 T ADMISSION_SYNTAX_set0_admissionAuthority",
+    "0000000008866564 T ADMISSION_SYNTAX_set0_contentsOfAdmissions",
+    "00000000087d9998 T AES_cbc_encrypt",
+    "00000000087a2d68 T AES_decrypt"
+  ],
+  "candidate_symbol_count": 0,
+  "candidate_preview": [],
+  "status": "library extracted and inspected; APK not installed or executed",
+  "trust_warning": "User-provided APK. Resource checksum verified, but official Mojang signing certificate has not been established.",
+  "retention": "Only metadata and symbol reports are published. APK and native binary are not uploaded.",
+  "deep_analysis": {
+    "analysis": "static only; no APK/game code execution",
+    "verified_hooks": [],
+    "runtime_validation": false,
+    "elf_sections": [
+      {
+        "name": ".dynsym",
+        "address": "0x143200c0",
+        "size": 2200632
+      },
+      {
+        "name": ".rodata",
+        "address": "0x2419f00",
+        "size": 20365556
+      },
+      {
+        "name": ".eh_frame",
+        "address": "0x47028f8",
+        "size": 34808496
+      },
+      {
+        "name": ".text",
+        "address": "0x6834bc0",
+        "size": 215607240
+      },
+      {
+        "name": ".data.rel.ro",
+        "address": "0x1368a9b0",
+        "size": 9479096
+      }
+    ],
+    "cpp_dynamic_symbol_count": 82615,
+    "cpp_dynamic_preview": [
+      "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev",
+      "_ZNSt6__ndk15mutexD1Ev",
+      "_ZNSt6__ndk118condition_variableD1Ev",
+      "_ZNSt6__ndk118condition_variable10notify_allEv",
+      "_ZNSt12length_errorD1Ev",
+      "_ZNSt11logic_errorC2EPKc",
+      "_ZNKSt11logic_error4whatEv",
+      "_ZNSt20bad_array_new_lengthC1Ev",
+      "_ZNSt20bad_array_new_lengthD1Ev",
+      "_ZSt9terminatev",
+      "_ZNSt6__ndk15mutex4lockEv",
+      "_ZNSt6__ndk15mutex6unlockEv",
+      "_ZNSt6__ndk119__shared_weak_countD2Ev",
+      "_ZNKSt6__ndk119__shared_weak_count13__get_deleterERKSt9type_info",
+      "_ZNSt6__ndk16chrono12steady_clock3nowEv",
+      "_ZNKSt9exception4whatEv",
+      "_ZNSt6__ndk119__shared_weak_count14__release_weakEv",
+      "_ZNSt6__ndk119__shared_weak_count4lockEv",
+      "_ZNSt6__ndk112bad_weak_ptrD1Ev",
+      "_ZNSt9exceptionD2Ev",
+      "_ZNSt6__ndk118shared_timed_mutexC1Ev",
+      "_ZNSt6__ndk112__next_primeEm",
+      "_ZNSt6__ndk118condition_variable4waitERNS_11unique_lockINS_5mutexEEE",
+      "_ZTVSt12length_error",
+      "_ZTISt20bad_array_new_length"
+    ],
+    "jni_exports": [
+      "Java_com_mojang_minecraftpe_MainActivity_nativeResize",
+      "Java_com_mojang_minecraftpe_AppExitInfoHelper_nativeSendApplicationExitInfo",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeProcessIntentUriQuery",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeKeyHandler",
+      "Java_com_mojang_minecraftpe_NotificationListenerService_nativePushNotificationReceived",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeReturnKeyPressed",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setRequestBody__Ljava_lang_String_2",
+      "Java_com_mojang_minecraftpe_WorldRecovery_nativeError",
+      "Java_com_microsoft_xal_androidjava_PresenceManager_pausePresence",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeShiftKeyPressed",
+      "Java_com_mojang_minecraftpe_MainActivity_isEduMode",
+      "Java_com_google_androidgamesdk_GameActivity_initializeNativeCode",
+      "Java_com_mojang_minecraftpe_CrashManager_nativeNotifyUncaughtException",
+      "Java_com_mojang_minecraftpe_MainActivity_isBrazeEnabled",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onPurchaseCanceled",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onPurchaseSuccessful",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeSetIntegrityToken",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeStopThis",
+      "Java_com_mojang_minecraftpe_MainActivity_isAndroidChromebook",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeStoragePermissionRequestResult",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeOnDestroy",
+      "Java_com_microsoft_xal_androidjava_PresenceManager_resumePresence",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeBackSpacePressed",
+      "Java_com_mojang_minecraftpe_MainActivity_isAndroidTrial",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_create",
+      "Java_com_mojang_minecraftpe_WorldRecovery_nativeUpdate",
+      "Java_com_microsoft_xbox_idp_interop_XboxLiveAppConfig_delete",
+      "Java_com_microsoft_xbox_idp_interop_XboxLiveAppConfig_getTitleId",
+      "Java_com_google_androidgamesdk_SwappyDisplayManager_nSetSupportedRefreshPeriods",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeClearAButtonState",
+      "Java_com_mojang_minecraftpe_input_JellyBeanDeviceManager_setControllerDetailsNative",
+      "Java_com_mojang_minecraftpe_WorldRecovery_nativeComplete",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeRunNativeCallbackOnUiThread",
+      "Java_com_microsoft_xal_browser_BrowserLaunchActivity_urlOperationCanceled",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setXboxContractVersionHeaderValue",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onQueryPurchasesSuccess",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setRequestBody___3B",
+      "Java_com_microsoft_xbox_idp_interop_XboxLiveAppConfig_getOverrideTitleId",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onPurchasePending",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onQueryPurchasesFail",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeLoginData",
+      "Java_com_mojang_minecraftpe_MainActivity_isAndroidAmazon",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeShutdown",
+      "Java_com_mojang_minecraftpe_MainActivity_onSoftKeyboardClosed",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onStoreInitialized",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setLongHttpCall",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeDeviceCorrelation",
+      "Java_com_mojang_minecraftpe_input_JellyBeanDeviceManager_onInputDeviceChangedNative",
+      "Java_com_mojang_minecraftpe_BatteryMonitor_nativeUpdateBatteryThermalStatus",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeOnPickImageCanceled",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeOnPickFileCanceled",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeSetIntegrityTokenErrorMessage",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setCustomHeader",
+      "Java_com_mojang_minecraftpe_input_JellyBeanDeviceManager_setFoundDualsenseControllerNative",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeSetHeadphonesConnected",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeWaitCrashManagementSetupComplete",
+      "Java_com_mojang_minecraftpe_FilePickerManager_nativeDirectoryPickResult",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onPurchaseFailed",
+      "Java_com_mojang_minecraftpe_MainActivity_isPreview",
+      "Java_com_microsoft_xbox_idp_interop_XboxLiveAppConfig_create",
+      "Java_com_microsoft_xal_browser_BrowserLaunchActivity_urlOperationFailed",
+      "Java_com_microsoft_xbox_idp_interop_XboxLiveAppConfig_getSandbox",
+      "Java_com_microsoft_xal_browser_BrowserLaunchActivity_urlOperationSucceeded",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setRetryAllowed",
+      "Java_com_mojang_minecraftpe_NetworkMonitor_nativeUpdateNetworkStatus",
+      "Java_com_mojang_minecraftpe_Webview_MinecraftWebview_nativeSendToHost",
+      "Java_com_mojang_minecraftpe_Webview_MinecraftWebview_nativeOnWebError",
+      "Java_com_mojang_minecraftpe_input_JellyBeanDeviceManager_setFoundPlaystationControllerNative",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onQueryProductsFail",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeSuspendGameplayUpdates",
+      "Java_com_mojang_minecraftpe_store_NativeStoreListener_onQueryProductsSuccess",
+      "Java_com_mojang_minecraftpe_input_JellyBeanDeviceManager_onInputDeviceRemovedNative",
+      "Java_com_google_androidgamesdk_SwappyDisplayManager_nOnRefreshPeriodChanged",
+      "Java_com_microsoft_xbox_idp_util_HttpCall_setContentTypeHeaderValue",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeBackPressed",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeGetDeviceId",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeOnPickImageSuccess",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeSuspend",
+      "Java_com_mojang_minecraftpe_MainActivity_nativeOnPickFileSuccess",
+      "Java_com_mojang_minecraftpe_input_JellyBeanDeviceManager_setFoundXboxControllerNative"
+    ],
+    "reference_symbol_checks": {
+      "Level::tick": [
+        {
+          "symbol": "_ZN5Level4tickEv",
+          "present": false
+        },
+        {
+          "symbol": "_ZN11ServerLevel4tickEv",
+          "present": false
+        }
+      ],
+      "ServerLevel::onLevelLoaded": [
+        {
+          "symbol": "_ZN5Level13onLevelLoadedEv",
+          "present": false
+        }
+      ],
+      "ServerNetworkHandler::handleTextPacket": [
+        {
+          "symbol": "_ZN20ServerNetworkHandler6handleERK18NetworkIdentifierRK10TextPacket",
+          "present": false
+        }
+      ],
+      "TextPacket::createChat": [
+        {
+          "symbol": "_ZN10TextPacket10createChatERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_PS6_S8_S8_",
+          "present": false
+        }
+      ],
+      "ServerPlayer::sendNetworkPacket": [
+        {
+          "symbol": "_ZNK6Player17sendNetworkPacketER6Packet",
+          "present": false
+        }
+      ],
+      "MinecraftCommands::executeCommand": [
+        {
+          "symbol": "_ZNK17MinecraftCommands14executeCommandE13CommandContextb",
+          "present": false
+        }
+      ],
+      "ResourcePackManager::setStack": [
+        {
+          "symbol": "_ZN19ResourcePackManager8setStackENSt6__ndk110unique_ptrI16ResourcePackStackNS0_14default_deleteIS2_EEEE16ResourcePackTypeb",
+          "present": false
+        }
+      ],
+      "Level::getActivePlayerCount": [
+        {
+          "symbol": "_ZNK5Level20getActivePlayerCountEv",
+          "present": false
+        }
+      ],
+      "Actor::getNameTag": [
+        {
+          "symbol": "_ZNK5Actor10getNameTagB5cxx11Ev",
+          "present": false
+        }
+      ],
+      "Actor::getPosition": [
+        {
+          "symbol": "_ZNK5Actor11getPositionEv",
+          "present": false
+        }
+      ],
+      "Player::getInventory": [
+        {
+          "symbol": "_ZN6Player18getSuppliesContainerEv",
+          "present": false
+        }
+      ],
+      "ScriptModuleMinecraft::registerBindings": [
+        {
+          "symbol": "_ZN36ScriptModuleMinecraft_ServerBindings16InitializeModuleER19ScriptModuleContext",
+          "present": false
+        }
+      ]
+    },
+    "anchor_counts": {
+      "LocalPlayer": 245,
+      "ClientInstance": 778,
+      "LevelRendererPlayer": 11,
+      "LevelRenderer": 128,
+      "ActorRenderDispatcher": 2,
+      "CameraComponent": 147,
+      "CameraSystem": 8,
+      "StateVectorComponent": 316,
+      "ActorRuntimeID": 26,
+      "ActorUniqueID": 232,
+      "PlayerRender": 24,
+      "MinecraftGame": 1036,
+      "worldToScreen": 0,
+      "getPosition": 14,
+      "getNameTag": 4,
+      "renderActor": 0,
+      "actor_render": 0,
+      "render_name_tags": 0
+    },
+    "anchor_samples": [
+      {
+        "term": "getPosition",
+        "section": ".dynstr",
+        "address": "0x63b4ad",
+        "match_address": "0x63b4bf",
+        "string": "_ZN4FMOD7Channel11getPositionEPjj"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x242407e",
+        "match_address": "0x24240b4",
+        "string": "const char *entt::internal::pretty_function() [Type = LocalPlayerPrePlayerTravelComponent]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x242b4f2",
+        "match_address": "0x242b4f5",
+        "string": "SetLocalPlayerAsInit"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x246a0a2",
+        "match_address": "0x246a0a2",
+        "string": "LocalPlayerRewindSystem"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x24c1874",
+        "match_address": "0x24c18aa",
+        "string": "const char *entt::internal::pretty_function() [Type = LocalPlayerComponent]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x252310f",
+        "match_address": "0x2523111",
+        "string": "isLocalPlayerHosting"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25251f6",
+        "match_address": "0x25251f6",
+        "string": "LocalPlayer::sendComplexInventoryTransaction setting up legacy item slots with {} slots"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x2529e23",
+        "match_address": "0x2529e26",
+        "string": "SetLocalPlayerAsInitializedPacketPayload"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x257eeab",
+        "match_address": "0x257eeba",
+        "string": "vanillaGameplayLocalPlayerWeatherLightningQuery"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25c5f3e",
+        "match_address": "0x25c5f77",
+        "string": "const char *entt::internal::pretty_function() [Type = SetLocalPlayerAsInitializedPacket]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25d0038",
+        "match_address": "0x25d0038",
+        "string": "LocalPlayerDebugCameraFilter"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25dd372",
+        "match_address": "0x25dd37c",
+        "string": "StopRidingLocalPlayerCameraForceCutSystem"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25dd60f",
+        "match_address": "0x25dd620",
+        "string": "vanillaGameplayIsLocalPlayerAliveQuery"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25de701",
+        "match_address": "0x25de72b",
+        "string": "void OreUI::WorldPlayersListQuery::_handleLocalPlayerDataChanged()"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x25fbe68",
+        "match_address": "0x25fbebf",
+        "string": "const char *entt::internal::pretty_function() [Type = RemoveFromAllEntitiesSystem<ActorLocalPlayerEntityMovedFlagComponent, SkipAiStepComponent, SkipNormalTickComponent, SkipMobTravelComponent>]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x261db0e",
+        "match_address": "0x261db12",
+        "string": "TickLocalPlayerSetPosition"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x265fa09",
+        "match_address": "0x265fa09",
+        "string": "LocalPlayer::sendComplexInventoryTransaction - No Legacy Item Slots"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x266203c",
+        "match_address": "0x266203c",
+        "string": "LocalPlayerPostMoveSystem"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x269c01e",
+        "match_address": "0x269c059",
+        "string": "const char *entt::internal::pretty_function() [Type = ActorLocalPlayerEntityMovedFlagComponent]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x269c388",
+        "match_address": "0x269c397",
+        "string": "vanillaGameplayLocalPlayerWakeUpCommand"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x26a37ab",
+        "match_address": "0x26a37ae",
+        "string": "SetLocalPlayerAsInitializedPacket"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x26fedc6",
+        "match_address": "0x26fedfc",
+        "string": "const char *entt::internal::pretty_function() [Type = LocalPlayerJumpRequestComponent]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x271daa2",
+        "match_address": "0x271daf4",
+        "string": "const char *entt::internal::pretty_function() [Type = RemoveFromAllEntitiesSystem<LocalPlayerJumpRequestComponent, LavaSlimeJumpRequestComponent, SquidJumpRequestComponent, OtherJumpRequestComponent>]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x273933c",
+        "match_address": "0x2739372",
+        "string": "const char *entt::internal::pretty_function() [Type = LocalPlayerDimensionWaitComponent]"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x273d9a3",
+        "match_address": "0x273d9c1",
+        "string": "NormalTickFilterSystem::createLocalPlayerSystem"
+      },
+      {
+        "term": "LocalPlayer",
+        "section": ".rodata",
+        "address": "0x279beaa",
+        "match_address": "0x279bead",
+        "string": "numLocalPlayers"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x242820f",
+        "match_address": "0x2428249",
+        "string": "void PersonaNetworkHandlerDelegate::_fetchLodSkinTexture(IClientInstance &, const mce::UUID &, uint32_t, const std::string &, std::string, const std::string &, std::weak_ptr<bool>)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x2443eb4",
+        "match_address": "0x2443eea",
+        "string": "D:\\a\\_work\\1\\s/handheld/src-client/common/client/game/ClientInstanceNavigationHelper.cpp"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x2502f12",
+        "match_address": "0x2502f48",
+        "string": "D:\\a\\_work\\1\\s/handheld/src-client/common/client/game/ClientInstance.cpp"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x25402bf",
+        "match_address": "0x25402fb",
+        "string": "const char *entt::internal::pretty_function() [Type = CameraClientInstanceComponent]"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x256467c",
+        "match_address": "0x25646aa",
+        "string": "void WhiskerDisplay::render(ScreenContext &, IClientInstance &)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x25838f5",
+        "match_address": "0x2583981",
+        "string": "static Bedrock::Threading::IAsyncResult<Core::HeapPathBuffer>::Handle ScreenshotUtils::requestScreenshot(const Bedrock::NotNullNonOwnerPtr<IClientInstance> &, ScreenshotOptions &)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x259eb63",
+        "match_address": "0x259eba7",
+        "string": "auto MinecraftGame::_clientUpdate()::(anonymous class)::operator()(IClientInstance &) const"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x25bf011",
+        "match_address": "0x25bf01e",
+        "string": "virtual void ClientInstance::requestLeaveGame(bool, bool)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x25dde54",
+        "match_address": "0x25dde54",
+        "string": "ClientInstance"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x25e03c6",
+        "match_address": "0x25e0452",
+        "string": "red_ptr<IOptionRegistry>, std::shared_ptr<Social::SocialDrawerManager>, std::shared_ptr<Social::InviteManager>, Bedrock::NotNullNonOwnerPtr<ClientInstanceEventCoordinator>, Bedrock::NotNullNonOwnerPtr<Social::MultiplayerServiceManager>, Bedrock::NotNullNonOwnerPtr<SignalingServiceSignInManager>, IGameServerShutdown &, World::NetworkWorldJ"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x25e3b81",
+        "match_address": "0x25e3b9b",
+        "string": "UpdatePlayerComponentsFromClientInstanceSystem"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x267d2f4",
+        "match_address": "0x267d36f",
+        "string": "auto (anonymous namespace)::UniversalGameJoinerAnon::joinMultiplayer(INetworkGameConnector &, Bedrock::NotNullNonOwnerPtr<IClientInstance>, const GameConnectionInfoEx &, PlayerJoinWorldContext &&)::(anonymous class)::operator()()"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x26babbe",
+        "match_address": "0x26babc3",
+        "string": "void ClientInstance::_joinWorldInProgressSubclient(brstd::optional<ConnectionContextInfo>)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x26bac19",
+        "match_address": "0x26bac52",
+        "string": "virtual Bedrock::Threading::Async<ClientGameSetupResult> ClientInstance::setupClientGame(bool, ServerSupportedAuthenticationTypes, std::unique_ptr<GameModuleClient>)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x26cd660",
+        "match_address": "0x26cd660",
+        "string": "ClientInstanceLoadResources"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x26fa423",
+        "match_address": "0x26fa42a",
+        "string": "SuspendClientInstance"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x2718ced",
+        "match_address": "0x2718d33",
+        "string": "void MinecraftGame::updateGraphics(const Bedrock::NotNullNonOwnerPtr<IClientInstance> &, const Timer &)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x275b918",
+        "match_address": "0x275b995",
+        "string": "void Parties::PartyTravelManager::_travelToDestination(const PartyDestinationGathering &, const Bedrock::NotNullNonOwnerPtr<IClientInstance> &)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x275cde5",
+        "match_address": "0x275ce3b",
+        "string": "auto LevelRendererCamera::render(BaseActorRenderContext &, const ViewRenderObject &, IClientInstance &)::(anonymous class)::operator()(CommandListTaskContext &) const"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x27da484",
+        "match_address": "0x27da4e2",
+        "string": "virtual void LevelRendererCamera::render(BaseActorRenderContext &, const ViewRenderObject &, IClientInstance &)"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x29fe0c8",
+        "match_address": "0x29fe0e1",
+        "string": "20EmptyGameplayHandlerI26ClientInstanceEventHandlerE"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x29fe0fd",
+        "match_address": "0x29fe118",
+        "string": "22EventHandlerDispatcherI26ClientInstanceEventHandlerE"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x29fe134",
+        "match_address": "0x29fe158",
+        "string": "N7Details22EventHandlerDispatcherI26ClientInstanceEventHandlerE4ImplIN4entt9type_listIJK27ClientInstanceGameplayEventIvEEEEEE"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x29fe134",
+        "match_address": "0x29fe18e",
+        "string": "N7Details22EventHandlerDispatcherI26ClientInstanceEventHandlerE4ImplIN4entt9type_listIJK27ClientInstanceGameplayEventIvEEEEEE"
+      },
+      {
+        "term": "ClientInstance",
+        "section": ".rodata",
+        "address": "0x29fe1b2",
+        "match_address": "0x29fe1d6",
+        "string": "N7Details22EventHandlerDispatcherI26ClientInstanceEventHandlerE14AddHandleEventINS2_4ImplIN4entt9type_listIJEEEEE13HandlerResult16EventVariantImplIJK33PlayerViewPerspectiveChangedEventK22ScreenSizeChangedEventEEEE"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x271c510",
+        "match_address": "0x271c515",
+        "string": "void LevelRendererPlayer::tickClouds(const bool, const float)"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x277ae42",
+        "match_address": "0x277ae81",
+        "string": "D:\\a\\_work\\1\\s/handheld/src-client/common/client/renderer/game/LevelRendererPlayer.cpp"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x277ae99",
+        "match_address": "0x277aea6",
+        "string": "virtual void LevelRendererPlayer::preRenderUpdate(ScreenContext &, LevelRenderPreRenderUpdateParameters &)"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2e4be9a",
+        "match_address": "0x2e4bedf",
+        "string": "NSt6__ndk110__function6__funcIZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNS_10unique_ptrI14ParticleEngineNS_14default_deleteIS9_EEEENS8_I20ParticleSystemEngineNSA_ISD_EEEEE3$_0NS_9allocatorISG_EEFvRK6OptionEEE"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2e4bf8c",
+        "match_address": "0x2e4bfb3",
+        "string": "ZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNSt6__ndk110unique_ptrI14ParticleEngineNS5_14default_deleteIS7_EEEENS6_I20ParticleSystemEngineNS8_ISB_EEEEE3$_0"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2e4c047",
+        "match_address": "0x2e4c08c",
+        "string": "NSt6__ndk110__function6__funcIZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNS_10unique_ptrI14ParticleEngineNS_14default_deleteIS9_EEEENS8_I20ParticleSystemEngineNSA_ISD_EEEEE3$_1NS_9allocatorISG_EEFvRK6OptionEEE"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2e4c139",
+        "match_address": "0x2e4c160",
+        "string": "ZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNSt6__ndk110unique_ptrI14ParticleEngineNS5_14default_deleteIS7_EEEENS6_I20ParticleSystemEngineNS8_ISB_EEEEE3$_1"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2ef591a",
+        "match_address": "0x2ef591c",
+        "string": "19LevelRendererPlayer"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2ef6123",
+        "match_address": "0x2ef6147",
+        "string": "?NSt6__ndk120__shared_ptr_emplaceI19LevelRendererPlayerNS_9allocatorIS1_EEEE"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2ef9c69",
+        "match_address": "0x2ef9c8b",
+        "string": "NSt6__ndk110__function6__funcIZN19LevelRendererPlayerC1ER15IClientInstanceNS_10shared_ptrI14OptionRegistryEER5LevelR13LevelRenderer13WeakEntityRefRKN3gsl8not_nullIN7Bedrock15NonOwnerPointerI20SoundPlayerInterfaceEEEERKNSE_INSG_IK12Tex"
+      },
+      {
+        "term": "LevelRendererPlayer",
+        "section": ".rodata",
+        "address": "0x2ef9d97",
+        "match_address": "0x2ef9d9b",
+        "string": "ZN19LevelRendererPlayerC1ER15IClientInstanceNSt6__ndk110shared_ptrI14OptionRegistryEER5LevelR13LevelRenderer13WeakEntityRefRKN3gsl8not_nullIN7Bedrock15NonOwnerPointerI20SoundPlayerInterfaceEEEERKNSC_INSE_"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2486ddd",
+        "match_address": "0x2486e1c",
+        "string": "D:\\a\\_work\\1\\s/handheld/src-client/common/client/renderer/game/LevelRendererShadowCamera.cpp"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x25266f1",
+        "match_address": "0x2526761",
+        "string": "bool LevelBuilder::scheduleChunkBuild(RenderChunkInstanced &, const std::shared_ptr<RenderChunkShared> &, bool, LevelRendererCamera &)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2610226",
+        "match_address": "0x2610226",
+        "string": "LevelRenderer"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2660cc9",
+        "match_address": "0x2660cce",
+        "string": "void LevelRendererCamera::updatePerChunkFaceSortState(const Vec3 &, const Vec3 &, bool)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x26de235",
+        "match_address": "0x26de274",
+        "string": "D:\\a\\_work\\1\\s/handheld/src-client/common/client/renderer/game/LevelRendererCamera.cpp"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x271c510",
+        "match_address": "0x271c515",
+        "string": "void LevelRendererPlayer::tickClouds(const bool, const float)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x271c568",
+        "match_address": "0x271c575",
+        "string": "virtual void LevelRendererShadowCamera::preRenderUpdate(ScreenContext &, LevelRenderPreRenderUpdateParameters &)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x275cde5",
+        "match_address": "0x275cdea",
+        "string": "auto LevelRendererCamera::render(BaseActorRenderContext &, const ViewRenderObject &, IClientInstance &)::(anonymous class)::operator()(CommandListTaskContext &) const"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2777a6f",
+        "match_address": "0x2777ab0",
+        "string": "virtual void InGamePlayScreen::_renderLevelPrep(ScreenContext &, LevelRenderer &, Actor &)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x277ae42",
+        "match_address": "0x277ae81",
+        "string": "D:\\a\\_work\\1\\s/handheld/src-client/common/client/renderer/game/LevelRendererPlayer.cpp"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x277ae99",
+        "match_address": "0x277aea6",
+        "string": "virtual void LevelRendererPlayer::preRenderUpdate(ScreenContext &, LevelRenderPreRenderUpdateParameters &)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x27da468",
+        "match_address": "0x27da46a",
+        "string": "A LevelRenderer group"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x27da484",
+        "match_address": "0x27da491",
+        "string": "virtual void LevelRendererCamera::render(BaseActorRenderContext &, const ViewRenderObject &, IClientInstance &)"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2de12c6",
+        "match_address": "0x2de130b",
+        "string": "NSt6__ndk110__function6__funcIZN22RenderChunkCoordinatorC1ER5LevelR13LevelRenderer13DimensionTypeE3$_0NS_9allocatorIS8_EEFmvEEE"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2de1346",
+        "match_address": "0x2de136d",
+        "string": "ZN22RenderChunkCoordinatorC1ER5LevelR13LevelRenderer13DimensionTypeE3$_0"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2de138f",
+        "match_address": "0x2de13d4",
+        "string": "NSt6__ndk110__function6__funcIZN22RenderChunkCoordinatorC1ER5LevelR13LevelRenderer13DimensionTypeE3$_1NS_9allocatorIS8_EEFRKN3mce5ColorEvEEE"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2de144e",
+        "match_address": "0x2de1475",
+        "string": "ZN22RenderChunkCoordinatorC1ER5LevelR13LevelRenderer13DimensionTypeE3$_1"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2de1497",
+        "match_address": "0x2de14dc",
+        "string": "NSt6__ndk110__function6__funcIZN22RenderChunkCoordinatorC1ER5LevelR13LevelRenderer13DimensionTypeE3$_2NS_9allocatorIS8_EEFfvEEE"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2de1517",
+        "match_address": "0x2de153e",
+        "string": "ZN22RenderChunkCoordinatorC1ER5LevelR13LevelRenderer13DimensionTypeE3$_2"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2e4be9a",
+        "match_address": "0x2e4bedf",
+        "string": "NSt6__ndk110__function6__funcIZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNS_10unique_ptrI14ParticleEngineNS_14default_deleteIS9_EEEENS8_I20ParticleSystemEngineNSA_ISD_EEEEE3$_0NS_9allocatorISG_EEFvRK6OptionEEE"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2e4bf8c",
+        "match_address": "0x2e4bfb3",
+        "string": "ZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNSt6__ndk110unique_ptrI14ParticleEngineNS5_14default_deleteIS7_EEEENS6_I20ParticleSystemEngineNS8_ISB_EEEEE3$_0"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2e4c047",
+        "match_address": "0x2e4c08c",
+        "string": "NSt6__ndk110__function6__funcIZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNS_10unique_ptrI14ParticleEngineNS_14default_deleteIS9_EEEENS8_I20ParticleSystemEngineNSA_ISD_EEEEE3$_1NS_9allocatorISG_EEFvRK6OptionEEE"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2e4c139",
+        "match_address": "0x2e4c160",
+        "string": "ZN28ParticleSystemInterfaceProxyC1ERK19LevelRendererPlayerR14OptionRegistryNSt6__ndk110unique_ptrI14ParticleEngineNS5_14default_deleteIS7_EEEENS6_I20ParticleSystemEngineNS8_ISB_EEEEE3$_1"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2ef5899",
+        "match_address": "0x2ef589b",
+        "string": "13LevelRenderer"
+      },
+      {
+        "term": "LevelRenderer",
+        "section": ".rodata",
+        "address": "0x2ef58a9",
+        "match_address": "0x2ef58ab",
+        "string": "19LevelRendererCamera"
+      },
+      {
+        "term": "ActorRenderDispatcher",
+        "section": ".rodata",
+        "address": "0x2c5bf4f",
+        "match_address": "0x2c5bf72",
+        "string": "NSt6__ndk120__shared_ptr_emplaceI21ActorRenderDispatcherNS_9allocatorIS1_EEEE"
+      },
+      {
+        "term": "ActorRenderDispatcher",
+        "section": ".rodata",
+        "address": "0x2de85da",
+        "match_address": "0x2de85dc",
+        "string": "21ActorRenderDispatcher"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x24a1eb1",
+        "match_address": "0x24a1f06",
+        "string": "const char *entt::internal::pretty_function() [Type = VanillaCamera::UpdatePlayerFromCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x24c30e8",
+        "match_address": "0x24c313b",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::CurrentInputCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2542047",
+        "match_address": "0x2542093",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::DebugCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x25bd2bd",
+        "match_address": "0x25bd304",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::CameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x25bd315",
+        "match_address": "0x25bd361",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::DeathCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x25fadc4",
+        "match_address": "0x25fae15",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::StationaryCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x25fcaa6",
+        "match_address": "0x25fcaf1",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::GameCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x265b8fd",
+        "match_address": "0x265b94a",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::ActiveCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x268eaae",
+        "match_address": "0x268eafd",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::OverrideCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x26b95d1",
+        "match_address": "0x26b961e",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::RenderCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x273690b",
+        "match_address": "0x273695e",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::DefaultInputCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x275e0e0",
+        "match_address": "0x275e122",
+        "string": "const char *entt::internal::pretty_function() [Type = ServerActiveCameraComponent]"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x29ff7e1",
+        "match_address": "0x29ff836",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageIN15MinecraftCamera25StationaryCameraComponentE8EntityIdNS_9allocatorIS4_EEEENS6_IS5_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x29ff871",
+        "match_address": "0x29ff8a5",
+        "string": "N4entt13basic_storageIN15MinecraftCamera25StationaryCameraComponentE8EntityIdNSt6__ndk19allocatorIS2_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a00e81",
+        "match_address": "0x2a00ecc",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageIN15MinecraftCamera15CameraComponentE8EntityIdNS_9allocatorIS4_EEEENS6_IS5_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a00f07",
+        "match_address": "0x2a00f31",
+        "string": "N4entt13basic_storageIN15MinecraftCamera15CameraComponentE8EntityIdNSt6__ndk19allocatorIS2_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a0154b",
+        "match_address": "0x2a015a4",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageIN13VanillaCamera31UpdatePlayerFromCameraComponentE8EntityIdNS_9allocatorIS4_EEEENS6_IS5_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a015df",
+        "match_address": "0x2a01617",
+        "string": "N4entt13basic_storageIN13VanillaCamera31UpdatePlayerFromCameraComponentE8EntityIdNSt6__ndk19allocatorIS2_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a01837",
+        "match_address": "0x2a01887",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageIN15MinecraftCamera20DeathCameraComponentE8EntityIdNS_9allocatorIS4_EEEENS6_IS5_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a018c2",
+        "match_address": "0x2a018f1",
+        "string": "N4entt13basic_storageIN15MinecraftCamera20DeathCameraComponentE8EntityIdNSt6__ndk19allocatorIS2_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a01a27",
+        "match_address": "0x2a01a7e",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageIN15MinecraftCamera27DefaultInputCameraComponentE8EntityIdNS_9allocatorIS4_EEEENS6_IS5_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a01ab9",
+        "match_address": "0x2a01aef",
+        "string": "N4entt13basic_storageIN15MinecraftCamera27DefaultInputCameraComponentE8EntityIdNSt6__ndk19allocatorIS2_EEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a4447d",
+        "match_address": "0x2a44509",
+        "string": "onAdapterIXadL_ZN15CameraBobSystem4tickERK5ViewTI19StrictEntityContextJ7IncludeIJN13VanillaCamera18CameraBobComponentEEEN15MinecraftCamera15CameraComponentENS7_21CameraAttachComponentEEERK14OptionalGlobalI18CameraAPIComponentERKSD_I25VanillaCameraAPIComponentEEEJEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a44587",
+        "match_address": "0x2a4460c",
+        "string": "20IStrictTickingSystemI22StrictExecutionContextI6FilterIJN13VanillaCamera18CameraBobComponentEEE4ReadIJEE5WriteIJN15MinecraftCamera15CameraComponentENS8_21CameraAttachComponentEEE9AddRemoveIJEE10GlobalReadIJEE11GlobalWriteIJ18CameraAPIComponent25VanillaCameraAPIComponentEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "CameraComponent",
+        "section": ".rodata",
+        "address": "0x2a44a33",
+        "match_address": "0x2a44abf",
+        "string": "stemFunctionAdapterIXadL_ZN24CameraLiquidOffsetSystem17_tickLiquidOffsetERK5ViewTI19StrictEntityContextJ7IncludeIJN15MinecraftCamera21ActiveCameraComponentEEEKNS4_15CameraComponentENS4_27CameraLiquidOffsetComponentEEERKS1_IS2_JK22ActorGameTypeComponentK22DimensionTypeComponent8OptionalIK18PlayerBobComponentEEERK14OptionalGlobalI29CameraCl"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x2456f96",
+        "match_address": "0x2456fa0",
+        "string": "StationaryCameraSystem"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x24963bb",
+        "match_address": "0x24963c0",
+        "string": "DebugCameraSystem"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x2a46156",
+        "match_address": "0x2a46194",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN32UpdatePlayerFromCameraSystemUtil27_tickUpdatePlayerFromCameraERK5ViewTI19StrictEntityContextJKN15MinecraftCamera15CameraComponentE8OptionalIKN13VanillaCamera31UpdatePlayerFromCameraComponentEES6_IKNS3_28RedirectCamer"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x36e60eb",
+        "match_address": "0x36e612c",
+        "string": "H34StrictTickingSystemFunctionAdapterIXadL_ZN34CameraShakeApplyToCameraSystemUtil29_tickCameraShakeApplyToCameraERK5ViewTI19StrictEntityContextJ7IncludeIJN15MinecraftCamera21ActiveCameraComponentEEEKNS4_27CameraShakeSupportComponentEEERKS1_IS2_JS3_IJNS4_19GameCamer"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x36e73d7",
+        "match_address": "0x36e7411",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN28CurrentInputCameraSystemUtil23_tickCurrentInputCameraERK5ViewTI19StrictEntityContextJ7IncludeIJN15MinecraftCamera21ActiveCameraComponentEEE8OptionalIKNS4_28RedirectCameraInputComponentEEEERKS1_IS2_JS3_IJNS4_27Def"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x36e7659",
+        "match_address": "0x36e768c",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN17DebugCameraSystem16_tickDebugCameraERK5ViewTI19StrictEntityContextJ7IncludeIJN15MinecraftCamera21RenderCameraComponentEEEKNS4_20DebugCameraComponentE8OptionalINS4_15CameraComponentEEEERKS1_IS2_JS3_IJNS4_19"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x36e78ce",
+        "match_address": "0x36e7906",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN22StationaryCameraSystem22stationaryCameraSystemERK5ViewTI19StrictEntityContextJN15MinecraftCamera15CameraComponentENS3_25StationaryCameraComponentE7ExcludeIJNS3_26CameraInstructionComponentENS3_21CameraTargetCom"
+      },
+      {
+        "term": "CameraSystem",
+        "section": ".rodata",
+        "address": "0x36e78ce",
+        "match_address": "0x36e791e",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN22StationaryCameraSystem22stationaryCameraSystemERK5ViewTI19StrictEntityContextJN15MinecraftCamera15CameraComponentENS3_25StationaryCameraComponentE7ExcludeIJNS3_26CameraInstructionComponentENS3_21CameraTargetComponentEEEEERKS1_IS2_JS4_"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x24637be",
+        "match_address": "0x24637f4",
+        "string": "const char *entt::internal::pretty_function() [Type = StateVectorComponent]"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2a453bb",
+        "match_address": "0x2a45447",
+        "string": "IComponentERKSO_I29CameraClientInstanceComponentERKS1_IS2_JS3_IJ20LocalPlayerComponentEEK22DimensionTypeComponentK21SleepCounterComponentK20StateVectorComponent8OptionalIK28DynamicRenderOffsetComponentES15_IK29PlayerIsSleepingFlagComponentEEERKSO_IK37LocalConstBlockSourceFactoryComponentEEEJEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2a45558",
+        "match_address": "0x2a455e4",
+        "string": "ameraSleepVignetteComponentE20LocalPlayerComponentEE4ReadIJNS2_25CameraBlendStateComponentE22DimensionTypeComponent21SleepCounterComponent20StateVectorComponent28DynamicRenderOffsetComponent29PlayerIsSleepingFlagComponentEE5WriteIJNS2_15CameraComponentEEE9AddRemoveIJNS2_32CameraRenderPlayerModelComponentEEE10GlobalReadIJ37LocalConstBlockS"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2a4ae5c",
+        "match_address": "0x2a4ae95",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageI20StateVectorComponent8EntityIdNS_9allocatorIS3_EEEENS5_IS4_EEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2a4aed4",
+        "match_address": "0x2a4aeec",
+        "string": "N4entt13basic_storageI20StateVectorComponent8EntityIdNSt6__ndk19allocatorIS1_EEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bcbe62",
+        "match_address": "0x2bcbeee",
+        "string": "mIJ7IncludeIJ34InterpolateMovementNeededComponentEEEEEvRK5ViewTI19StrictEntityContextJDpT_7ExcludeIJ34PrevPosRotSetThisTickFlagComponentEE20StateVectorComponent22ActorRotationComponentEERK14EntityModifierIJSA_EEEEJXadL_ZNS0_36_setPreviousPosRotSystemSingleEntityIJS4_EEEvRKS6_SG_SK_EEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bcbf81",
+        "match_address": "0x2bcbff3",
+        "string": "20IStrictTickingSystemI22StrictExecutionContextI6FilterIJ34InterpolateMovementNeededComponentEE4ReadIJEE5WriteIJ20StateVectorComponent22ActorRotationComponentEE9AddRemoveIJ34PrevPosRotSetThisTickFlagComponentEE10GlobalReadIJEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bd31f8",
+        "match_address": "0x2bd3284",
+        "string": "lageManagerComponentERK5ViewTI19StrictEntityContextJ7IncludeIJK20ActorTickedComponentEEK22ActorUniqueIDComponentK22DimensionTypeComponentK20StateVectorComponent19ActorOwnerComponent16DwellerComponentEERK14EntityModifierIJ27JoinRaidQueuedFlagComponentEEEEJEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bd32fa",
+        "match_address": "0x2bd3385",
+        "string": "20IStrictTickingSystemI22StrictExecutionContextI6FilterIJK20ActorTickedComponentEE4ReadIJ22ActorUniqueIDComponent22DimensionTypeComponent20StateVectorComponentEE5WriteIJ19ActorOwnerComponent16DwellerComponentEE9AddRemoveIJ27JoinRaidQueuedFlagComponentEE10GlobalReadIJ23VillageManagerComponentEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bd599d",
+        "match_address": "0x2bd5a29",
+        "string": "7IncludeIJK20ActorTickedComponentK27JoinRaidQueuedFlagComponentEEK19ActorOwnerComponentK22ActorUniqueIDComponentK22DimensionTypeComponentK20StateVectorComponentEERK14EntityModifierIJSC_EEEEJEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bd5a90",
+        "match_address": "0x2bd5b1c",
+        "string": "ilterIJK20ActorTickedComponentK27JoinRaidQueuedFlagComponentEE4ReadIJ19ActorOwnerComponent22ActorUniqueIDComponent22DimensionTypeComponent20StateVectorComponentEE5WriteIJEE9AddRemoveIJS4_EE10GlobalReadIJ23VillageManagerComponentEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bd7131",
+        "match_address": "0x2bd71bd",
+        "string": "illageManagerComponentERK5ViewTI19StrictEntityContextJ7IncludeIJK20ActorTickedComponentK20RaidTriggerComponentEEK22DimensionTypeComponentK20StateVectorComponent19ActorOwnerComponentEEEEJEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2bd71ee",
+        "match_address": "0x2bd7278",
+        "string": "20IStrictTickingSystemI22StrictExecutionContextI6FilterIJK20ActorTickedComponentK20RaidTriggerComponentEE4ReadIJ22DimensionTypeComponent20StateVectorComponentEE5WriteIJ19ActorOwnerComponentEE9AddRemoveIJEE10GlobalReadIJ23VillageManagerComponentEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2c663b8",
+        "match_address": "0x2c66444",
+        "string": "PlayerComponent18HorseFlagComponent16MobFlagComponent19ParrotFlagComponent16VehicleComponent18CamelFlagComponent15PlayerComponentEE4ReadIJ20StateVectorComponent22ActorRotationComponent28CameraAimAssistTickComponent24MobBodyRotationComponent18PassengerComponent23RenderRotationComponent23StandAnimationComponent22ActorDataFlagComponent18AABB"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2c6c10a",
+        "match_address": "0x2c6c196",
+        "string": "ingOffsetComponent27MovementAttributesComponent22DimensionTypeComponent25ImmuneToLavaDragComponent19MobEffectsComponent17SneakingComponent20StateVectorComponent15SubBBsComponent23WasInWaterFlagComponentEE5WriteIJ19ActorOwnerComponent24ClientInputLockComponent18MoveInputComponent21RawMoveInputComponentSK_28ActorDataDirtyFlagsComponent30Van"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f89344",
+        "match_address": "0x2f893d0",
+        "string": "tHomePositionSystemAnon28handleSetHomePositionRequestEN4entt9type_listIJ7IncludeIJ31SetHomePositionRequestComponentEEEEER13HomeComponentRK20StateVectorComponentRK22DimensionTypeComponentEEE4ImplINS5_IJSB_SE_SH_EEENS5_IJS9_SB_SE_SH_EEENS5_IJEEEE10tickSystemERK5ViewTI19StrictEntityContextJS8_SA_SD_SG_EEEEJXadL_ZNSN_16singleTickSystemERKSP_S"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8949f",
+        "match_address": "0x2f89504",
+        "string": "20IStrictTickingSystemI22StrictExecutionContextI6FilterIJ31SetHomePositionRequestComponentEE4ReadIJ20StateVectorComponent22DimensionTypeComponentEE5WriteIJ13HomeComponentEE9AddRemoveIJEE10GlobalReadIJEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8a0ab",
+        "match_address": "0x2f8a137",
+        "string": "RK36ServerPlayerCurrentMovementComponentRK29UserEntityIdentifierComponentR29ServerPlayerMovementComponent8OptionalIK18PassengerComponentER20StateVectorComponentRK5ViewTIS3_JK22ActorRotationComponent19ActorOwnerComponent20ReplayStateComponentSI_SE_IK21BoatMovementComponentEEEEEE4ImplIN4entt9type_listIJS8_SB_SD_SH_SJ_SU_EEENSY_IJS5_S8_SB_SD"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8a2dd",
+        "match_address": "0x2f8a369",
+        "string": "9UserEntityIdentifierComponent18PassengerComponent22ActorRotationComponent21BoatMovementComponentEE5WriteIJ29ServerPlayerMovementComponent20StateVectorComponent19ActorOwnerComponent20ReplayStateComponentEE9AddRemoveIJEE10GlobalReadIJEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8a48a",
+        "match_address": "0x2f8a516",
+        "string": "eSystemEN4entt9type_listIJ7IncludeIJ32ActorMovementTickNeededComponent36ServerPlayerCurrentMovementComponentEEEEERK19ActorOwnerComponentRK20StateVectorComponentR21FallDistanceComponentEEE4ImplINS4_IJSC_SF_SH_EEENS4_IJS9_SC_SF_SH_EEENS4_IJEEEE10tickSystemERK5ViewTI19StrictEntityContextJS8_SB_SE_SG_EEEEJXadL_ZNSN_16singleTickSystemERKSP_SS_"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8a5f8",
+        "match_address": "0x2f8a684",
+        "string": "mI22StrictExecutionContextI6FilterIJ32ActorMovementTickNeededComponent36ServerPlayerCurrentMovementComponentEE4ReadIJ19ActorOwnerComponent20StateVectorComponentEE5WriteIJ21FallDistanceComponentEE9AddRemoveIJEE10GlobalReadIJEE11GlobalWriteIJEE14EntityFactoryTIJEEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8ab7f",
+        "match_address": "0x2f8abd7",
+        "string": "NSt6__ndk110__function6__funcIZN26ServerPlayerMovementSystem21_tryResetFallDistanceERK20StateVectorComponentRK4AABBR21FallDistanceComponentRK11BlockSourceE3$_0NS_9allocatorISE_EEFbSD_RK5BlockbEEE"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8ac43",
+        "match_address": "0x2f8ac7d",
+        "string": "ZN26ServerPlayerMovementSystem21_tryResetFallDistanceERK20StateVectorComponentRK4AABBR21FallDistanceComponentRK11BlockSourceE3$_0"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8b1ea",
+        "match_address": "0x2f8b26b",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN36ServerPlayerTeleportProtectionSystem10tickSystemERK5ViewTI19StrictEntityContextJK20StateVectorComponent29ServerPlayerMovementComponent36ServerPlayerTeleportingFlagComponent8OptionalI46InvalidChunkFoundWhileTeleportingFlagComponentEEERK14EntityModifierIJS8_S6_EERKS1_IS2_JK22Dimension"
+      },
+      {
+        "term": "StateVectorComponent",
+        "section": ".rodata",
+        "address": "0x2f8b384",
+        "match_address": "0x2f8b3c8",
+        "string": "20IStrictTickingSystemI22StrictExecutionContextI6FilterIJEE4ReadIJ20StateVectorComponent22DimensionTypeComponentEE5WriteIJ29ServerPlayerMovementComponentEE9AddRemoveIJ46InvalidChunkFoundWhileTeleportingFlagComponent36ServerPlayerTeleportingFlagComponentEE10GlobalReadI"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x24c888d",
+        "match_address": "0x24c88cf",
+        "string": "const char *entt::internal::pretty_function() [Type = std::vector<ActorRuntimeID>]"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x2622c0e",
+        "match_address": "0x2622c44",
+        "string": "const char *entt::internal::pretty_function() [Type = ActorRuntimeID]"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x2643a71",
+        "match_address": "0x2643a71",
+        "string": "ActorRuntimeIDs of the entities that will play the specified animation"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x2682d49",
+        "match_address": "0x2682d90",
+        "string": "const char *entt::internal::pretty_function() [Type = std::__wrap_iter<ActorRuntimeID *>]"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x26c0c8a",
+        "match_address": "0x26c0cd7",
+        "string": "const char *entt::internal::pretty_function() [Type = std::__wrap_iter<const ActorRuntimeID *>]"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x2700829",
+        "match_address": "0x2700829",
+        "string": "ActorRuntimeID"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x27be191",
+        "match_address": "0x27be1d6",
+        "string": "const char *entt::internal::pretty_function() [Type = std::allocator<ActorRuntimeID>]"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x2f95c0e",
+        "match_address": "0x2f95c86",
+        "string": "NSt6__ndk110__function6__funcIZN31ProcessPlayerActionPacketSystem27_forwardPlayerActionPacketsERK17NetworkIdentifierRK14ActorRuntimeIDRK21PlayerAuthInputPacketRK21PlayerActionComponentR16NetEventCallbackE3$_0NS_9allocatorISH_EEFvR18PlayerActionPacketEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x2f95d45",
+        "match_address": "0x2f95d9f",
+        "string": "ZN31ProcessPlayerActionPacketSystem27_forwardPlayerActionPacketsERK17NetworkIdentifierRK14ActorRuntimeIDRK21PlayerAuthInputPacketRK21PlayerActionComponentR16NetEventCallbackE3$_0"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x302532a",
+        "match_address": "0x302534a",
+        "string": "N6cereal8internal10TypeSchemaI14ActorRuntimeIDEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033881",
+        "match_address": "0x303390d",
+        "string": "_ndk110__function6__funcIZN9serializeI26AnimateEntityPacketPayloadE4readER20ReadOnlyBinaryStreamE3$_7NS_9allocatorIS7_EEFN7Bedrock6ResultI14ActorRuntimeIDNS_10error_codeEEES6_EEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033934",
+        "match_address": "0x3033966",
+        "string": "NSt6__ndk110__function6__baseIFN7Bedrock6ResultI14ActorRuntimeIDNS_10error_codeEEER20ReadOnlyBinaryStreamEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x30339ee",
+        "match_address": "0x3033a30",
+        "string": "NSt6__ndk110__function6__funcIZN12BinaryStream15writeVectorListI14ActorRuntimeIDEEvRKNS_6vectorIT_NS_9allocatorIS6_EEEEONS_8functionIFvRS2_RKS6_EEEPKcSK_EUlSD_E_NS7_ISL_EEFvSD_EEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033aa2",
+        "match_address": "0x3033ac6",
+        "string": "ZN12BinaryStream15writeVectorListI14ActorRuntimeIDEEvRKNSt6__ndk16vectorIT_NS2_9allocatorIS4_EEEEONS2_8functionIFvRS_RKS4_EEEPKcSI_EUlSB_E_"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033b2e",
+        "match_address": "0x3033b70",
+        "string": "NSt6__ndk110__function6__funcIZN12BinaryStream15writeVectorListI14ActorRuntimeIDEEvRKNS_6vectorIT_NS_9allocatorIS6_EEEEONS_8functionIFvRS2_RKS6_EEEPKcSK_EUlSD_E0_NS7_ISL_EEFvSD_EEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033be3",
+        "match_address": "0x3033c07",
+        "string": "ZN12BinaryStream15writeVectorListI14ActorRuntimeIDEEvRKNSt6__ndk16vectorIT_NS2_9allocatorIS4_EEEEONS2_8functionIFvRS_RKS4_EEEPKcSI_EUlSB_E0_"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033c70",
+        "match_address": "0x3033cf4",
+        "string": "NSt6__ndk110__function6__funcIZN9serializeI26AnimateEntityPacketPayloadE5writeERKS3_R12BinaryStreamE3$_1NS_9allocatorIS9_EEFvS8_RK14ActorRuntimeIDEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033d06",
+        "match_address": "0x3033d39",
+        "string": "NSt6__ndk110__function6__baseIFvR12BinaryStreamRK14ActorRuntimeIDEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033dd8",
+        "match_address": "0x3033e0a",
+        "string": "N6cereal8internal10TypeSchemaINSt6__ndk16vectorI14ActorRuntimeIDNS2_9allocatorIS4_EEEEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033e31",
+        "match_address": "0x3033e7c",
+        "string": "NSt6__ndk110__function6__funcIZNK6cereal8internal10TypeSchemaINS_6vectorI14ActorRuntimeIDNS_9allocatorIS6_EEEEE5doMapERN4entt8meta_anyESD_RNS2_11MetaVisitorEEUlvE_NS7_ISG_EEFbvEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x3033ee5",
+        "match_address": "0x3033f19",
+        "string": "ZNK6cereal8internal10TypeSchemaINSt6__ndk16vectorI14ActorRuntimeIDNS2_9allocatorIS4_EEEEE5doMapERN4entt8meta_anyESB_RNS_11MetaVisitorEEUlvE_"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x30a34c8",
+        "match_address": "0x30a34ed",
+        "string": "N6cereal8internal15CompositeSchemaI14ActorRuntimeIDEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x340bc92",
+        "match_address": "0x340bcb5",
+        "string": "NSt6__ndk110__function6__funcIZNK21ActorRuntimeIDManager21getRuntimeActorEntityE14ActorRuntimeIDbE3$_0NS_9allocatorIS4_EEFbRK6PlayerEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x340bc92",
+        "match_address": "0x340bce4",
+        "string": "NSt6__ndk110__function6__funcIZNK21ActorRuntimeIDManager21getRuntimeActorEntityE14ActorRuntimeIDbE3$_0NS_9allocatorIS4_EEFbRK6PlayerEEE"
+      },
+      {
+        "term": "ActorRuntimeID",
+        "section": ".rodata",
+        "address": "0x340bd1a",
+        "match_address": "0x340bd1f",
+        "string": "ZNK21ActorRuntimeIDManager21getRuntimeActorEntityE14ActorRuntimeIDbE3$_0"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x24c9e5c",
+        "match_address": "0x24c9e71",
+        "string": "mTargetPlayerId is a ActorUniqueID"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2549ee1",
+        "match_address": "0x2549f41",
+        "string": "This is sent to the client to confirm which entity is being removed. This is done by sending an ActorUniqueID"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x26822d0",
+        "match_address": "0x2682312",
+        "string": "const char *entt::internal::pretty_function() [Type = std::vector<ActorUniqueID>]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x26a1f05",
+        "match_address": "0x26a1f52",
+        "string": "const char *entt::internal::pretty_function() [Type = std::__wrap_iter<const ActorUniqueID *>]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x26dfa89",
+        "match_address": "0x26dface",
+        "string": "const char *entt::internal::pretty_function() [Type = std::allocator<ActorUniqueID>]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x26dfade",
+        "match_address": "0x26dfb2e",
+        "string": "const char *entt::internal::pretty_function() [Type = std::optional<std::vector<ActorUniqueID>>]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x26ff5ce",
+        "match_address": "0x26ff604",
+        "string": "const char *entt::internal::pretty_function() [Type = ActorUniqueID]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x271e286",
+        "match_address": "0x271e2cd",
+        "string": "const char *entt::internal::pretty_function() [Type = std::__wrap_iter<ActorUniqueID *>]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2738d6d",
+        "match_address": "0x2738db6",
+        "string": "void OreUI::WorldPlayersListQuery::_handlePlayerPermissionsChanged(const ActorUniqueID &, const brstd::optional<PlayerPermissionLevel>)"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2760251",
+        "match_address": "0x2760251",
+        "string": "ActorUniqueID"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x276037e",
+        "match_address": "0x27603c2",
+        "string": "const char *entt::internal::pretty_function() [Type = std::optional<ActorUniqueID>]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x27b7b97",
+        "match_address": "0x27b7bcd",
+        "string": "const char *entt::internal::pretty_function() [Type = ActorUniqueIDComponent]"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x27ffc89",
+        "match_address": "0x27ffc8d",
+        "string": "The ActorUniqueID of the NPC being remote fired"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a142a6",
+        "match_address": "0x2a14324",
+        "string": "NSt6__ndk110__function6__funcIZN23FurnaceScreenControllerC1ENS_10shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_0NS_9allocatorISF_EEFP19ContainerControllerRKNS_12basic_stringIcNS_11char_traitsIcEENSG_IcEEEEEEE"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a1441c",
+        "match_address": "0x2a14483",
+        "string": "ZN23FurnaceScreenControllerC1ENSt6__ndk110shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_0"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a144a6",
+        "match_address": "0x2a14524",
+        "string": "NSt6__ndk110__function6__funcIZN23FurnaceScreenControllerC1ENS_10shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_1NS_9allocatorISF_EEFivEEE"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a14560",
+        "match_address": "0x2a145c7",
+        "string": "ZN23FurnaceScreenControllerC1ENSt6__ndk110shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_1"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a145ea",
+        "match_address": "0x2a14668",
+        "string": "NSt6__ndk110__function6__funcIZN23FurnaceScreenControllerC1ENS_10shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_2NS_9allocatorISF_EEFivEEE"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a146a4",
+        "match_address": "0x2a1470b",
+        "string": "ZN23FurnaceScreenControllerC1ENSt6__ndk110shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_2"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a1472e",
+        "match_address": "0x2a147ac",
+        "string": "NSt6__ndk110__function6__funcIZN23FurnaceScreenControllerC1ENS_10shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_3NS_9allocatorISF_EEFbRNS_12basic_stringIcNS_11char_traitsIcEENSG_IcEEEERiSO_EEE"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a1481e",
+        "match_address": "0x2a14885",
+        "string": "ZN23FurnaceScreenControllerC1ENSt6__ndk110shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_3"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a148a8",
+        "match_address": "0x2a14926",
+        "string": "NSt6__ndk110__function6__funcIZN23FurnaceScreenControllerC1ENS_10shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_4NS_9allocatorISF_EEFviRK9ItemStackSK_EEE"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a14971",
+        "match_address": "0x2a149d8",
+        "string": "ZN23FurnaceScreenControllerC1ENSt6__ndk110shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_4"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a149fb",
+        "match_address": "0x2a14a79",
+        "string": "NSt6__ndk110__function6__funcIZN23FurnaceScreenControllerC1ENS_10shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_5NS_9allocatorISF_EEFviRK9ItemStackSK_EEE"
+      },
+      {
+        "term": "ActorUniqueID",
+        "section": ".rodata",
+        "address": "0x2a14ac4",
+        "match_address": "0x2a14b2b",
+        "string": "ZN23FurnaceScreenControllerC1ENSt6__ndk110shared_ptrI25ClientInstanceScreenModelEER6PlayerRK8BlockPos13ActorUniqueIDRK12HashedStringE3$_5"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x252085d",
+        "match_address": "0x25208aa",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftCamera::ExtendPlayerRenderingComponent]"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x26afbcc",
+        "match_address": "0x26afc20",
+        "string": "const char *entt::internal::pretty_function() [Type = SharedTypes::v1_21_100::ExtendPlayerRenderingDefinition]"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x29fd3b6",
+        "match_address": "0x29fd407",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN4entt13basic_storageIN15MinecraftCamera30ExtendPlayerRenderingComponentE8EntityIdNS_9allocatorIS4_EEEENS6_IS5_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x29fd44b",
+        "match_address": "0x29fd47b",
+        "string": "N4entt13basic_storageIN15MinecraftCamera30ExtendPlayerRenderingComponentE8EntityIdNSt6__ndk19allocatorIS2_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2c44742",
+        "match_address": "0x2c44747",
+        "string": "17HudPlayerRenderer"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2c44814",
+        "match_address": "0x2c4481a",
+        "string": "18LivePlayerRenderer"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2c45461",
+        "match_address": "0x2c45487",
+        "string": "NSt6__ndk120__shared_ptr_emplaceI17HudPlayerRendererNS_9allocatorIS1_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2c454ab",
+        "match_address": "0x2c454d2",
+        "string": "NSt6__ndk120__shared_ptr_emplaceI18LivePlayerRendererNS_9allocatorIS1_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4964",
+        "match_address": "0x2ef4986",
+        "string": "NSt6__ndk110__function6__funcIZN16PlayerRenderView48setupRenderOrderPiggybackingExistingRenderStagesER17RenderPassContextRN3mce11RenderStageEE3$_0NS_9allocatorIS8_EEFS7_vEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4a4a",
+        "match_address": "0x2ef4a4e",
+        "string": "ZN16PlayerRenderView48setupRenderOrderPiggybackingExistingRenderStagesER17RenderPassContextRN3mce11RenderStageEE3$_0"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4b1b",
+        "match_address": "0x2ef4b60",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN11rendergraph16CustomRenderPassIN16PlayerRenderView22LegacyPlayerRenderPassEEENS_9allocatorIS5_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4b1b",
+        "match_address": "0x2ef4b78",
+        "string": "NSt6__ndk120__shared_ptr_emplaceIN11rendergraph16CustomRenderPassIN16PlayerRenderView22LegacyPlayerRenderPassEEENS_9allocatorIS5_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4ba1",
+        "match_address": "0x2ef4bc5",
+        "string": "N11rendergraph16CustomRenderPassIN16PlayerRenderView22LegacyPlayerRenderPassEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4ba1",
+        "match_address": "0x2ef4bdd",
+        "string": "N11rendergraph16CustomRenderPassIN16PlayerRenderView22LegacyPlayerRenderPassEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4bf1",
+        "match_address": "0x2ef4c13",
+        "string": "NSt6__ndk110__function6__funcIZN16PlayerRenderView14_declarePassesER17RenderPassContextRN11rendergraph20DeclarationInterfaceEiE3$_1NS_9allocatorIS8_EEFvRKNS2_22LegacyPlayerRenderPassERNS5_13RenderContextEEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4c0b",
+        "match_address": "0x2ef4c97",
+        "string": "uncIZN16PlayerRenderView14_declarePassesER17RenderPassContextRN11rendergraph20DeclarationInterfaceEiE3$_1NS_9allocatorIS8_EEFvRKNS2_22LegacyPlayerRenderPassERNS5_13RenderContextEEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4cc1",
+        "match_address": "0x2ef4ce6",
+        "string": "NSt6__ndk110__function6__baseIFvRKN16PlayerRenderView22LegacyPlayerRenderPassERN11rendergraph13RenderContextEEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4cc1",
+        "match_address": "0x2ef4cfe",
+        "string": "NSt6__ndk110__function6__baseIFvRKN16PlayerRenderView22LegacyPlayerRenderPassERN11rendergraph13RenderContextEEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4d32",
+        "match_address": "0x2ef4d36",
+        "string": "ZN16PlayerRenderView14_declarePassesER17RenderPassContextRN11rendergraph20DeclarationInterfaceEiE3$_1"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4e18",
+        "match_address": "0x2ef4e3a",
+        "string": "NSt6__ndk110__function6__funcIZN16PlayerRenderView14_declarePassesER17RenderPassContextRN11rendergraph20DeclarationInterfaceEiE3$_3NS_9allocatorIS8_EEFvRNS5_13RenderContextEEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2ef4f0c",
+        "match_address": "0x2ef4f10",
+        "string": "ZN16PlayerRenderView14_declarePassesER17RenderPassContextRN11rendergraph20DeclarationInterfaceEiE3$_3"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x2efa74f",
+        "match_address": "0x2efa772",
+        "string": "NSt6__ndk120__shared_ptr_emplaceI16PlayerRenderViewNS_9allocatorIS1_EEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x37384fb",
+        "match_address": "0x373853e",
+        "string": "N6cereal8internal15CompositeSchemaIN11SharedTypes9v1_21_10031ExtendPlayerRenderingDefinitionEEE"
+      },
+      {
+        "term": "PlayerRender",
+        "section": ".rodata",
+        "address": "0x373aee6",
+        "match_address": "0x373af24",
+        "string": "N6cereal8internal10TypeSchemaIN11SharedTypes9v1_21_10031ExtendPlayerRenderingDefinitionEEE"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x24441eb",
+        "match_address": "0x24441eb",
+        "string": "MinecraftGame Storage Group"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x24652ae",
+        "match_address": "0x24652ae",
+        "string": "MinecraftGame Init Group"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x24a3868",
+        "match_address": "0x24a389e",
+        "string": "D:/a/_work/1/s/handheld/src-client/common/client/game/MinecraftGame.cpp"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x24c323f",
+        "match_address": "0x24c3244",
+        "string": "void MinecraftGame::onTick()"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x25030d7",
+        "match_address": "0x25030d7",
+        "string": "MinecraftGame ServerInit Group"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2525d97",
+        "match_address": "0x2525dca",
+        "string": "void Social::UserManager::_doAutoSignInIfPossible(IMinecraftGame &)"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2560dcc",
+        "match_address": "0x2560dd9",
+        "string": "virtual void MinecraftGame::update()"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2560e04",
+        "match_address": "0x2560e3a",
+        "string": "const char *entt::internal::pretty_function() [Type = MinecraftGameShimComponent]"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x257f8e2",
+        "match_address": "0x257f8e7",
+        "string": "auto MinecraftGame::_initPartySystem()::(anonymous class)::operator()(bool) const"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x259eb63",
+        "match_address": "0x259eb68",
+        "string": "auto MinecraftGame::_clientUpdate()::(anonymous class)::operator()(IClientInstance &) const"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x25bd19d",
+        "match_address": "0x25bd19d",
+        "string": "MinecraftGame::init && MinecraftGame::setSize!"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x25bd19d",
+        "match_address": "0x25bd1b4",
+        "string": "MinecraftGame::init && MinecraftGame::setSize!"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x25bf40d",
+        "match_address": "0x25bf412",
+        "string": "void MinecraftGame::_joinMultiplayerAfterTransportLayerDetermined(Social::GameConnectionInfo, bool, const std::string &, const std::string &, NetworkType, PlayerJoinWorldContext, TransportLayer)"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x25ddd94",
+        "match_address": "0x25ddd99",
+        "string": "void MinecraftGame::startFrame()"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x25dde02",
+        "match_address": "0x25dde07",
+        "string": "auto MinecraftGame::update()::(anonymous class)::operator()() const"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x261dbf5",
+        "match_address": "0x261dbf5",
+        "string": "MinecraftGame JoinMultiplayer Group"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x261dcc2",
+        "match_address": "0x261dccf",
+        "string": "virtual void MinecraftGame::completeServerStartup(std::shared_ptr<LocalServerLauncher::ServerInitData>, LocalServerLauncher::ServerLaunchResult &&)"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x261dd5f",
+        "match_address": "0x261dd7f",
+        "string": "Bedrock::Threading::Async<void> MinecraftGame::_handleMultiplayerServiceJoinResult(const Social::MultiplayerServiceIdentifier, Social::JoinGameStatus, const Social::MultiplayerGameInfo &, bool)"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x26baee7",
+        "match_address": "0x26baeec",
+        "string": "void MinecraftGame::_update()"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x26baf05",
+        "match_address": "0x26baf12",
+        "string": "virtual void MinecraftGame::joinMultiplayerWithAddress(Social::GameConnectionInfo, bool, const std::string &, const std::string &, NetworkType, std::shared_ptr<bool>, PlayerJoinWorldContext)"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x26c20f0",
+        "match_address": "0x26c20f8",
+        "string": "Sent to MinecraftGame to complete the resource pack loading process."
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2718cb7",
+        "match_address": "0x2718cd2",
+        "string": "SerialWorkList::WorkResult MinecraftGame::_initUser()"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2718ced",
+        "match_address": "0x2718cf2",
+        "string": "void MinecraftGame::updateGraphics(const Bedrock::NotNullNonOwnerPtr<IClientInstance> &, const Timer &)"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2738397",
+        "match_address": "0x273839c",
+        "string": "auto MinecraftGame::joinMultiplayerWithAddress(Social::GameConnectionInfo, bool, const std::string &, const std::string &, NetworkType, std::shared_ptr<bool>, PlayerJoinWorldContext)::(anonymous class)::op"
+      },
+      {
+        "term": "MinecraftGame",
+        "section": ".rodata",
+        "address": "0x2758ef0",
+        "match_address": "0x2758f10",
+        "string": "Bedrock::Threading::Async<void> MinecraftGame::_joinMultiplayerGame(const Social::MultiplayerGameInfo &, const std::string &, PlayerJoinWorldContext, OnlineSafetyDialogVisibility)"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x25398ce",
+        "match_address": "0x25398ce",
+        "string": "getPosition"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x269ca6e",
+        "match_address": "0x269ca7d",
+        "string": "CaptureBlockTargetPositionSystem"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c6754d",
+        "match_address": "0x2c67590",
+        "string": "[g3NSt6__ndk110__function6__funcIZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlock"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c6754d",
+        "match_address": "0x2c675b2",
+        "string": "[g3NSt6__ndk110__function6__funcIZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlockPosSystemWorkSliceERKN15CameraAimA"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c6772c",
+        "match_address": "0x2c6774e",
+        "string": "ZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlock"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c6772c",
+        "match_address": "0x2c67770",
+        "string": "ZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlockPosSystemWorkSliceERKN15CameraAimA"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c6789d",
+        "match_address": "0x2c678dd",
+        "string": "NSt6__ndk110__function6__funcIZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlock"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c6789d",
+        "match_address": "0x2c678ff",
+        "string": "NSt6__ndk110__function6__funcIZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlockPosSystemWorkSliceERKN15CameraAimA"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c67a79",
+        "match_address": "0x2c67a9b",
+        "string": "ZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlock"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c67a79",
+        "match_address": "0x2c67abd",
+        "string": "ZN47CameraAimAssistCaptureBlockTargetPositionSystem26captureBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRK37CameraAimAssistCachedFrustumComponentRK17IConstBlockSourcefbN25CameraAimAssistSystemUtil39AimAssistCaptureBlockPosSystemWorkSliceERKN15CameraAimA"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c67cd4",
+        "match_address": "0x2c67d20",
+        "string": "34StrictTickingSystemFunctionAdapterIXadL_ZN47CameraAimAssistCaptureBlockTargetPositionSystem4tickERK5ViewTI19StrictEntityContextJK24CameraAimAssistComponentK28CameraAimAssistTickComponentK34CameraAimAssistCachedDataComponentK39CameraAimAssistCategoryUpdaterComponentK37Camera"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c68126",
+        "match_address": "0x2c68189",
+        "string": "NSt6__ndk110__function6__funcIZN33CameraAimAssistCreateResultSystem41createBlockTargetsFromBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRKN15CameraAimAssist16PriorityCategoryERKNS5_27PriorityPresetExclusionDataERK17IConstBlockSourceRK4Vec3fbNS_8functionIFbRK5BlockEEEE3$_0NS_9allocator"
+      },
+      {
+        "term": "getPosition",
+        "section": ".rodata",
+        "address": "0x2c68269",
+        "match_address": "0x2c682ae",
+        "string": "ZN33CameraAimAssistCreateResultSystem41createBlockTargetsFromBlockTargetPositionER36CameraAimAssistBlockTargetsComponentRKN15CameraAimAssist16PriorityCategoryERKNS2_27PriorityPresetExclusionDataERK17IConstBlockSourceRK4Vec3fbNSt6__ndk18functionIFbRK5BlockEEEE3$_0"
+      },
+      {
+        "term": "getNameTag",
+        "section": ".rodata",
+        "address": "0x30c11a8",
+        "match_address": "0x30c1234",
+        "string": "_ptr_emplaceIN9Scripting10Reflection20MemberPropertyGetterIN21ScriptModuleMinecraft19ScriptContainerSlotELNS2_12ReturnPolicyE0EXadL_ZNKS5_10getNameTagEvEEEENS_9allocatorIS7_EEEE"
+      },
+      {
+        "term": "getNameTag",
+        "section": ".rodata",
+        "address": "0x30c125a",
+        "match_address": "0x30c12d9",
+        "string": "N9Scripting10Reflection20MemberPropertyGetterIN21ScriptModuleMinecraft19ScriptContainerSlotELNS0_12ReturnPolicyE0EXadL_ZNKS3_10getNameTagEvEEEE"
+      },
+      {
+        "term": "getNameTag",
+        "section": ".rodata",
+        "address": "0x30c642d",
+        "match_address": "0x30c64b9",
+        "string": "ared_ptr_emplaceIN9Scripting10Reflection20MemberPropertyGetterIN21ScriptModuleMinecraft15ScriptItemStackELNS2_12ReturnPolicyE0EXadL_ZNKS5_10getNameTagEvEEEENS_9allocatorIS7_EEEE"
+      },
+      {
+        "term": "getNameTag",
+        "section": ".rodata",
+        "address": "0x30c64df",
+        "match_address": "0x30c655a",
+        "string": "N9Scripting10Reflection20MemberPropertyGetterIN21ScriptModuleMinecraft15ScriptItemStackELNS0_12ReturnPolicyE0EXadL_ZNKS3_10getNameTagEvEEEE"
+      }
+    ],
+    "adrp_add_candidate_count": 347,
+    "xref_disassembly_samples": [
+      {
+        "xref": "0x73ab9b8",
+        "target": "0x25398ce",
+        "terms": [
+          "getPosition"
+        ],
+        "instructions": [
+          "0x73ab9a0 ldr x8, [x19, #0xba0]",
+          "0x73ab9a4 ldr x9, [x19, #0x38]",
+          "0x73ab9a8 ldur w10, [x8, #-1]",
+          "0x73ab9ac add x9, x9, x10",
+          "0x73ab9b0 ldurh wzr, [x9, #7]",
+          "0x73ab9b4 b #0x73aba58",
+          "0x73ab9b8 adrp x8, #0x2539000",
+          "0x73ab9bc add x8, x8, #0x8ce",
+          "0x73ab9c0 mov w9, #0xb",
+          "0x73ab9c4 add x1, sp, #8",
+          "0x73ab9c8 mov x0, x19",
+          "0x73ab9cc mov w2, wzr",
+          "0x73ab9d0 stp x8, x9, [sp, #8]",
+          "0x73ab9d4 bl #0xe811ea0",
+          "0x73ab9d8 cbz x0, #0x73abb18",
+          "0x73ab9dc mov x2, x0",
+          "0x73ab9e0 mov w1, #0x40",
+          "0x73ab9e4 mov x0, x19",
+          "0x73ab9e8 mov x3, x20",
+          "0x73ab9ec mov x4, xzr"
+        ]
+      },
+      {
+        "xref": "0x73abae0",
+        "target": "0x25398ce",
+        "terms": [
+          "getPosition"
+        ],
+        "instructions": [
+          "0x73abac8 mov w1, wzr",
+          "0x73abacc bl #0xe8124bc",
+          "0x73abad0 bl #0xe8124d4",
+          "0x73abad4 sbfiz x20, x0, #1, #0x20",
+          "0x73abad8 cbnz x19, #0x73aba0c",
+          "0x73abadc b #0x73aba34",
+          "0x73abae0 adrp x8, #0x2539000",
+          "0x73abae4 add x8, x8, #0x8ce",
+          "0x73abae8 mov w9, #0xb",
+          "0x73abaec sub x1, x29, #0x10",
+          "0x73abaf0 mov x0, x19",
+          "0x73abaf4 mov w2, wzr",
+          "0x73abaf8 stp x8, x9, [x29, #-0x10]",
+          "0x73abafc bl #0xe811ea0",
+          "0x73abb00 cbz x0, #0x73abb18",
+          "0x73abb04 mov x2, x0",
+          "0x73abb08 mov w1, #0x1d",
+          "0x73abb0c mov x0, x19",
+          "0x73abb10 mov x3, xzr",
+          "0x73abb14 b #0x73ab9ec"
+        ]
+      },
+      {
+        "xref": "0x88a259c",
+        "target": "0x25bd19d",
+        "terms": [
+          "MinecraftGame"
+        ],
+        "instructions": [
+          "0x88a2584 adrp x8, #0x1407c000",
+          "0x88a2588 ldr x8, [x8, #0x3a8]",
+          "0x88a258c cbz x8, #0x88a2654",
+          "0x88a2590 mov w0, #5",
+          "0x88a2594 adrp x1, #0x2463000",
+          "0x88a2598 add x1, x1, #0x454",
+          "0x88a259c adrp x2, #0x25bd000",
+          "0x88a25a0 add x2, x2, #0x19d",
+          "0x88a25a4 bl #0xe80b8bc",
+          "0x88a25a8 ldr x8, [sp, #0x60]",
+          "0x88a25ac cbz x8, #0x88a2620",
+          "0x88a25b0 ldrb w8, [x8]",
+          "0x88a25b4 tbz w8, #0, #0x88a2630",
+          "0x88a25b8 ldr x0, [sp, #0x70]",
+          "0x88a25bc ldr x8, [x0]",
+          "0x88a25c0 ldr x8, [x8, #0x10]",
+          "0x88a25c4 blr x8",
+          "0x88a25c8 ldp x0, x8, [sp, #0x78]",
+          "0x88a25cc adrp x9, #0x13767000",
+          "0x88a25d0 add x10, x9, #0xd50"
+        ]
+      },
+      {
+        "xref": "0x896f320",
+        "target": "0x2a1441c",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x896f308 ldr x21, [sp, #0x30]",
+          "0x896f30c ldp x29, x30, [sp, #0x20]",
+          "0x896f310 add sp, sp, #0x50",
+          "0x896f314 ret ",
+          "0x896f318 bl #0xe8032b0",
+          "0x896f31c ldr x8, [x1, #8]",
+          "0x896f320 adrp x9, #0x2a14000",
+          "0x896f324 add x9, x9, #0x41c",
+          "0x896f328 add x10, x0, #8",
+          "0x896f32c cmp x8, x9",
+          "0x896f330 csel x0, x10, xzr, eq",
+          "0x896f334 ret ",
+          "0x896f338 adrp x0, #0x13771000",
+          "0x896f33c add x0, x0, #0x480",
+          "0x896f340 ret ",
+          "0x896f344 b #0xe803424",
+          "0x896f348 stp x29, x30, [sp, #-0x20]!",
+          "0x896f34c str x19, [sp, #0x10]",
+          "0x896f350 mov x29, sp",
+          "0x896f354 mov x19, x0"
+        ]
+      },
+      {
+        "xref": "0x896f3b8",
+        "target": "0x2a14560",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x896f3a0 cbz x0, #0x896f3ac",
+          "0x896f3a4 mov w1, #1",
+          "0x896f3a8 b #0x90e2bb0",
+          "0x896f3ac mov w0, #-1",
+          "0x896f3b0 ret ",
+          "0x896f3b4 ldr x8, [x1, #8]",
+          "0x896f3b8 adrp x9, #0x2a14000",
+          "0x896f3bc add x9, x9, #0x560",
+          "0x896f3c0 add x10, x0, #8",
+          "0x896f3c4 cmp x8, x9",
+          "0x896f3c8 csel x0, x10, xzr, eq",
+          "0x896f3cc ret ",
+          "0x896f3d0 adrp x0, #0x13771000",
+          "0x896f3d4 add x0, x0, #0x500",
+          "0x896f3d8 ret ",
+          "0x896f3dc sub sp, sp, #0x60",
+          "0x896f3e0 stp x29, x30, [sp, #0x30]",
+          "0x896f3e4 str x21, [sp, #0x40]",
+          "0x896f3e8 stp x20, x19, [sp, #0x50]",
+          "0x896f3ec add x29, sp, #0x30"
+        ]
+      },
+      {
+        "xref": "0x896f5e8",
+        "target": "0x2a146a4",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x896f5d0 cbz x0, #0x896f5dc",
+          "0x896f5d4 mov w1, #1",
+          "0x896f5d8 b #0x90e2d18",
+          "0x896f5dc mov w0, #-1",
+          "0x896f5e0 ret ",
+          "0x896f5e4 ldr x8, [x1, #8]",
+          "0x896f5e8 adrp x9, #0x2a14000",
+          "0x896f5ec add x9, x9, #0x6a4",
+          "0x896f5f0 add x10, x0, #8",
+          "0x896f5f4 cmp x8, x9",
+          "0x896f5f8 csel x0, x10, xzr, eq",
+          "0x896f5fc ret ",
+          "0x896f600 adrp x0, #0x13771000",
+          "0x896f604 add x0, x0, #0x580",
+          "0x896f608 ret ",
+          "0x896f60c ret ",
+          "0x896f610 b #0xe803424",
+          "0x896f614 stp x29, x30, [sp, #-0x20]!",
+          "0x896f618 str x19, [sp, #0x10]",
+          "0x896f61c mov x29, sp"
+        ]
+      },
+      {
+        "xref": "0x896f67c",
+        "target": "0x2a1481e",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x896f664 ldr x8, [x0, #8]",
+          "0x896f668 ldr x0, [x8, #0xe90]",
+          "0x896f66c cbz x0, #0x896f674",
+          "0x896f670 b #0x90e2e80",
+          "0x896f674 ret ",
+          "0x896f678 ldr x8, [x1, #8]",
+          "0x896f67c adrp x9, #0x2a14000",
+          "0x896f680 add x9, x9, #0x81e",
+          "0x896f684 add x10, x0, #8",
+          "0x896f688 cmp x8, x9",
+          "0x896f68c csel x0, x10, xzr, eq",
+          "0x896f690 ret ",
+          "0x896f694 adrp x0, #0x13771000",
+          "0x896f698 add x0, x0, #0x600",
+          "0x896f69c ret ",
+          "0x896f6a0 stp x29, x30, [sp, #-0x30]!",
+          "0x896f6a4 stp x22, x21, [sp, #0x10]",
+          "0x896f6a8 stp x20, x19, [sp, #0x20]",
+          "0x896f6ac mov x29, sp",
+          "0x896f6b0 ldr x8, [x1, #0x20]"
+        ]
+      },
+      {
+        "xref": "0x896fa90",
+        "target": "0x2a14971",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x896fa78 cmp x8, x9",
+          "0x896fa7c b.ne #0x896fa88",
+          "0x896fa80 mov x0, x19",
+          "0x896fa84 bl #0x8897594",
+          "0x896fa88 bl #0xe8032b0",
+          "0x896fa8c ldr x8, [x1, #8]",
+          "0x896fa90 adrp x9, #0x2a14000",
+          "0x896fa94 add x9, x9, #0x971",
+          "0x896fa98 add x10, x0, #8",
+          "0x896fa9c cmp x8, x9",
+          "0x896faa0 csel x0, x10, xzr, eq",
+          "0x896faa4 ret ",
+          "0x896faa8 adrp x0, #0x13771000",
+          "0x896faac add x0, x0, #0x680",
+          "0x896fab0 ret ",
+          "0x896fab4 ret ",
+          "0x896fab8 b #0xe803424",
+          "0x896fabc stp x29, x30, [sp, #-0x20]!",
+          "0x896fac0 str x19, [sp, #0x10]",
+          "0x896fac4 mov x29, sp"
+        ]
+      },
+      {
+        "xref": "0x896fca0",
+        "target": "0x2a14ac4",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x896fc88 cmp x8, x9",
+          "0x896fc8c b.ne #0x896fc98",
+          "0x896fc90 mov x0, x19",
+          "0x896fc94 bl #0x8897594",
+          "0x896fc98 bl #0xe8032b0",
+          "0x896fc9c ldr x8, [x1, #8]",
+          "0x896fca0 adrp x9, #0x2a14000",
+          "0x896fca4 add x9, x9, #0xac4",
+          "0x896fca8 add x10, x0, #8",
+          "0x896fcac cmp x8, x9",
+          "0x896fcb0 csel x0, x10, xzr, eq",
+          "0x896fcb4 ret ",
+          "0x896fcb8 adrp x0, #0x13771000",
+          "0x896fcbc add x0, x0, #0x700",
+          "0x896fcc0 ret ",
+          "0x896fcc4 sub sp, sp, #0x70",
+          "0x896fcc8 stp x29, x30, [sp, #0x20]",
+          "0x896fccc stp x26, x25, [sp, #0x30]",
+          "0x896fcd0 stp x24, x23, [sp, #0x40]",
+          "0x896fcd4 stp x22, x21, [sp, #0x50]"
+        ]
+      },
+      {
+        "xref": "0x8a65ecc",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x8a65eb4 ldarb w8, [x8]",
+          "0x8a65eb8 tbz w8, #0, #0x8a65ee8",
+          "0x8a65ebc ldr w8, [x9, #0x7a8]",
+          "0x8a65ec0 mov w9, #0x7b38",
+          "0x8a65ec4 movk w9, #0xacb4, lsl #16",
+          "0x8a65ec8 stp w8, w9, [x0]",
+          "0x8a65ecc adrp x8, #0x24c1000",
+          "0x8a65ed0 add x8, x8, #0x8aa",
+          "0x8a65ed4 mov w9, #0x14",
+          "0x8a65ed8 stp x8, x9, [x0, #8]",
+          "0x8a65edc ldp x29, x30, [sp, #0x10]",
+          "0x8a65ee0 add sp, sp, #0x20",
+          "0x8a65ee4 ret ",
+          "0x8a65ee8 adrp x8, #0x1407f000",
+          "0x8a65eec add x8, x8, #0x7b0",
+          "0x8a65ef0 str x0, [sp, #8]",
+          "0x8a65ef4 mov x0, x8",
+          "0x8a65ef8 bl #0xe803480",
+          "0x8a65efc mov w8, w0",
+          "0x8a65f00 ldr x0, [sp, #8]"
+        ]
+      },
+      {
+        "xref": "0x8a67920",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x8a67908 add x29, sp, #0x120",
+          "0x8a6790c mrs x20, tpidr_el0",
+          "0x8a67910 mov x19, x8",
+          "0x8a67914 mov x21, sp",
+          "0x8a67918 ldr x8, [x20, #0x28]",
+          "0x8a6791c mov w23, #1",
+          "0x8a67920 adrp x1, #0x24c1000",
+          "0x8a67924 add x1, x1, #0x8aa",
+          "0x8a67928 add x0, x21, #8",
+          "0x8a6792c mov w2, #0x14",
+          "0x8a67930 stur x8, [x29, #-8]",
+          "0x8a67934 strb w23, [sp]",
+          "0x8a67938 bl #0xe82f7a8",
+          "0x8a6793c mov w8, #0x7b38",
+          "0x8a67940 add x22, x21, #0x28",
+          "0x8a67944 strb w23, [sp, #0x28]",
+          "0x8a67948 movk w8, #0xacb4, lsl #16",
+          "0x8a6794c str w8, [sp, #0x20]",
+          "0x8a67950 adrp x1, #0x2481000",
+          "0x8a67954 add x1, x1, #0x569"
+        ]
+      },
+      {
+        "xref": "0x8a70900",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x8a708e8 ldarb w8, [x8]",
+          "0x8a708ec tbz w8, #0, #0x8a7091c",
+          "0x8a708f0 ldr w8, [x9, #0x8f8]",
+          "0x8a708f4 mov w9, #0x5238",
+          "0x8a708f8 movk w9, #0x1b5d, lsl #16",
+          "0x8a708fc stp w8, w9, [x0]",
+          "0x8a70900 adrp x8, #0x2463000",
+          "0x8a70904 add x8, x8, #0x7f4",
+          "0x8a70908 mov w9, #0x14",
+          "0x8a7090c stp x8, x9, [x0, #8]",
+          "0x8a70910 ldp x29, x30, [sp, #0x10]",
+          "0x8a70914 add sp, sp, #0x20",
+          "0x8a70918 ret ",
+          "0x8a7091c adrp x8, #0x1407f000",
+          "0x8a70920 add x8, x8, #0x900",
+          "0x8a70924 str x0, [sp, #8]",
+          "0x8a70928 mov x0, x8",
+          "0x8a7092c bl #0xe803480",
+          "0x8a70930 mov w8, w0",
+          "0x8a70934 ldr x0, [sp, #8]"
+        ]
+      },
+      {
+        "xref": "0x8a73668",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x8a73650 bl #0xe82f7a8",
+          "0x8a73654 mov w8, #0xce60",
+          "0x8a73658 add x22, x21, #0x50",
+          "0x8a7365c strb w23, [sp, #0x58]",
+          "0x8a73660 movk w8, #0x5844, lsl #16",
+          "0x8a73664 str w8, [sp, #0x50]",
+          "0x8a73668 adrp x1, #0x24c1000",
+          "0x8a7366c add x1, x1, #0x8aa",
+          "0x8a73670 add x0, x21, #0x58",
+          "0x8a73674 mov w2, #0x14",
+          "0x8a73678 bl #0xe82f7a8",
+          "0x8a7367c mov w8, #0x7b38",
+          "0x8a73680 add x23, sp, #8",
+          "0x8a73684 mov w24, #1",
+          "0x8a73688 movk w8, #0xacb4, lsl #16",
+          "0x8a7368c add x22, x23, #0x78",
+          "0x8a73690 strb w24, [sp, #0x80]",
+          "0x8a73694 str w8, [sp, #0x78]",
+          "0x8a73698 adrp x1, #0x255f000",
+          "0x8a7369c add x1, x1, #0x302"
+        ]
+      },
+      {
+        "xref": "0x8a73714",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x8a736fc bl #0xe82f7a8",
+          "0x8a73700 mov w8, #0x8adb",
+          "0x8a73704 add x22, x23, #0xf0",
+          "0x8a73708 strb w24, [sp, #0xf8]",
+          "0x8a7370c movk w8, #0xd432, lsl #16",
+          "0x8a73710 str w8, [sp, #0xf0]",
+          "0x8a73714 adrp x1, #0x2463000",
+          "0x8a73718 add x1, x1, #0x7f4",
+          "0x8a7371c add x0, x23, #0xf8",
+          "0x8a73720 mov w2, #0x14",
+          "0x8a73724 bl #0xe82f7a8",
+          "0x8a73728 mov w8, #0x5238",
+          "0x8a7372c add x23, sp, #8",
+          "0x8a73730 strb w24, [sp, #0x120]",
+          "0x8a73734 movk w8, #0x1b5d, lsl #16",
+          "0x8a73738 add x22, x23, #0x118",
+          "0x8a7373c str w8, [sp, #0x118]",
+          "0x8a73740 adrp x1, #0x265b000",
+          "0x8a73744 add x1, x1, #0x991",
+          "0x8a73748 add x0, x23, #0x120"
+        ]
+      },
+      {
+        "xref": "0x96d5aa8",
+        "target": "0x24240b4",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x96d5a90 tbz w9, #0, #0x96d5ac8",
+          "0x96d5a94 mov w9, #0x9636",
+          "0x96d5a98 sub x10, x8, #0x1c",
+          "0x96d5a9c ldr w11, [x8]",
+          "0x96d5aa0 movk w9, #0x856a, lsl #16",
+          "0x96d5aa4 str w9, [x8, #0x368]",
+          "0x96d5aa8 adrp x9, #0x2424000",
+          "0x96d5aac add x9, x9, #0xb4",
+          "0x96d5ab0 str x9, [x10, #0x388]",
+          "0x96d5ab4 mov w9, #0x23",
+          "0x96d5ab8 str w11, [x8, #0x364]",
+          "0x96d5abc str x9, [x10, #0x390]",
+          "0x96d5ac0 ldp x29, x30, [sp], #0x10",
+          "0x96d5ac4 ret ",
+          "0x96d5ac8 adrp x0, #0x14083000",
+          "0x96d5acc add x0, x0, #0xd88",
+          "0x96d5ad0 bl #0xe803480",
+          "0x96d5ad4 adrp x8, #0x14083000",
+          "0x96d5ad8 add x8, x8, #0xcb4",
+          "0x96d5adc cbz w0, #0x96d5a94"
+        ]
+      },
+      {
+        "xref": "0x96d7c98",
+        "target": "0x24240b4",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x96d7c80 mov w8, #0xf66c",
+          "0x96d7c84 add x23, sp, #8",
+          "0x96d7c88 strb w24, [sp, #0xd0]",
+          "0x96d7c8c movk w8, #0xe195, lsl #16",
+          "0x96d7c90 add x22, x23, #0xc8",
+          "0x96d7c94 str w8, [sp, #0xc8]",
+          "0x96d7c98 adrp x1, #0x2424000",
+          "0x96d7c9c add x1, x1, #0xb4",
+          "0x96d7ca0 add x0, x23, #0xd0",
+          "0x96d7ca4 mov w2, #0x23",
+          "0x96d7ca8 bl #0xe82f7a8",
+          "0x96d7cac mov w8, #0x9636",
+          "0x96d7cb0 add x22, x23, #0xf0",
+          "0x96d7cb4 strb w24, [sp, #0xf8]",
+          "0x96d7cb8 movk w8, #0x856a, lsl #16",
+          "0x96d7cbc str w8, [sp, #0xf0]",
+          "0x96d7cc0 adrp x1, #0x269b000",
+          "0x96d7cc4 add x1, x1, #0xe9f",
+          "0x96d7cc8 add x0, x23, #0xf8",
+          "0x96d7ccc mov w2, #0x12"
+        ]
+      },
+      {
+        "xref": "0x96e7518",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x96e7500 bl #0xe82f7a8",
+          "0x96e7504 mov w8, #0x7f13",
+          "0x96e7508 add x22, x21, #0x28",
+          "0x96e750c strb w23, [sp, #0x30]",
+          "0x96e7510 movk w8, #0x91a6, lsl #16",
+          "0x96e7514 str w8, [sp, #0x28]",
+          "0x96e7518 adrp x1, #0x2463000",
+          "0x96e751c add x1, x1, #0x7f4",
+          "0x96e7520 add x0, x21, #0x30",
+          "0x96e7524 mov w2, #0x14",
+          "0x96e7528 bl #0xe82f7a8",
+          "0x96e752c mov w8, #0x5238",
+          "0x96e7530 add x22, x21, #0x50",
+          "0x96e7534 strb w23, [sp, #0x58]",
+          "0x96e7538 movk w8, #0x1b5d, lsl #16",
+          "0x96e753c str w8, [sp, #0x50]",
+          "0x96e7540 adrp x1, #0x24e0000",
+          "0x96e7544 add x1, x1, #0xb5f",
+          "0x96e7548 add x0, x21, #0x58",
+          "0x96e754c mov w2, #0x16"
+        ]
+      },
+      {
+        "xref": "0x96fd4b0",
+        "target": "0x25dd372",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x96fd498 add x8, x8, #0xb48",
+          "0x96fd49c str x0, [sp, #8]",
+          "0x96fd4a0 stp q0, q0, [x0]",
+          "0x96fd4a4 stp q0, q0, [x0, #0x20]",
+          "0x96fd4a8 str q0, [x0, #0x40]",
+          "0x96fd4ac str x8, [x0]",
+          "0x96fd4b0 adrp x1, #0x25dd000",
+          "0x96fd4b4 add x1, x1, #0x372",
+          "0x96fd4b8 add x0, x22, #8",
+          "0x96fd4bc mov w2, #0x29",
+          "0x96fd4c0 bl #0xe82f7a8",
+          "0x96fd4c4 movi v0.2d, #0000000000000000",
+          "0x96fd4c8 mov w8, #2",
+          "0x96fd4cc str wzr, [sp, #0x2c]",
+          "0x96fd4d0 strb w8, [sp, #0x28]",
+          "0x96fd4d4 strb wzr, [sp, #0x30]",
+          "0x96fd4d8 strh wzr, [sp, #0x38]",
+          "0x96fd4dc stp q0, q0, [sp, #0x40]",
+          "0x96fd4e0 stp q0, q0, [sp, #0x60]",
+          "0x96fd4e4 stur q0, [sp, #0x80]"
+        ]
+      },
+      {
+        "xref": "0x97062ac",
+        "target": "0x27b7bcd",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x9706294 ldarb w8, [x8]",
+          "0x9706298 tbz w8, #0, #0x97062c8",
+          "0x970629c ldr w8, [x9, #0x4d8]",
+          "0x97062a0 mov w9, #0x57af",
+          "0x97062a4 movk w9, #0x18f9, lsl #16",
+          "0x97062a8 stp w8, w9, [x0]",
+          "0x97062ac adrp x8, #0x27b7000",
+          "0x97062b0 add x8, x8, #0xbcd",
+          "0x97062b4 mov w9, #0x16",
+          "0x97062b8 stp x8, x9, [x0, #8]",
+          "0x97062bc ldp x29, x30, [sp, #0x10]",
+          "0x97062c0 add sp, sp, #0x20",
+          "0x97062c4 ret ",
+          "0x97062c8 adrp x8, #0x14084000",
+          "0x97062cc add x8, x8, #0x4e0",
+          "0x97062d0 str x0, [sp, #8]",
+          "0x97062d4 mov x0, x8",
+          "0x97062d8 bl #0xe803480",
+          "0x97062dc mov w8, w0",
+          "0x97062e0 ldr x0, [sp, #8]"
+        ]
+      },
+      {
+        "xref": "0x970b3fc",
+        "target": "0x27b7bcd",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x970b3e4 bl #0xe82f7a8",
+          "0x970b3e8 mov w8, #0xfeed",
+          "0x970b3ec add x22, x21, #0x28",
+          "0x970b3f0 strb w23, [sp, #0x30]",
+          "0x970b3f4 movk w8, #0x3dc2, lsl #16",
+          "0x970b3f8 str w8, [sp, #0x28]",
+          "0x970b3fc adrp x1, #0x27b7000",
+          "0x970b400 add x1, x1, #0xbcd",
+          "0x970b404 add x0, x21, #0x30",
+          "0x970b408 mov w2, #0x16",
+          "0x970b40c bl #0xe82f7a8",
+          "0x970b410 mov w8, #0x57af",
+          "0x970b414 add x22, x21, #0x50",
+          "0x970b418 strb w23, [sp, #0x58]",
+          "0x970b41c movk w8, #0x18f9, lsl #16",
+          "0x970b420 str w8, [sp, #0x50]",
+          "0x970b424 adrp x1, #0x255f000",
+          "0x970b428 add x1, x1, #0x2b4",
+          "0x970b42c add x0, x21, #0x58",
+          "0x970b430 mov w2, #0x16"
+        ]
+      },
+      {
+        "xref": "0x970b454",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x970b43c add x23, sp, #8",
+          "0x970b440 mov w24, #1",
+          "0x970b444 movk w8, #0xaf99, lsl #16",
+          "0x970b448 add x22, x23, #0x78",
+          "0x970b44c strb w24, [sp, #0x80]",
+          "0x970b450 str w8, [sp, #0x78]",
+          "0x970b454 adrp x1, #0x2463000",
+          "0x970b458 add x1, x1, #0x7f4",
+          "0x970b45c add x0, x23, #0x80",
+          "0x970b460 mov w2, #0x14",
+          "0x970b464 bl #0xe82f7a8",
+          "0x970b468 mov w8, #0x5238",
+          "0x970b46c add x22, x23, #0xa0",
+          "0x970b470 strb w24, [sp, #0xa8]",
+          "0x970b474 movk w8, #0x1b5d, lsl #16",
+          "0x970b478 str w8, [sp, #0xa0]",
+          "0x970b47c adrp x1, #0x25fb000",
+          "0x970b480 add x1, x1, #0xe01",
+          "0x970b484 add x0, x23, #0xa8",
+          "0x970b488 mov w2, #0x13"
+        ]
+      },
+      {
+        "xref": "0x97148fc",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x97148e4 add x29, sp, #0x80",
+          "0x97148e8 mrs x20, tpidr_el0",
+          "0x97148ec mov x19, x8",
+          "0x97148f0 mov x21, sp",
+          "0x97148f4 ldr x8, [x20, #0x28]",
+          "0x97148f8 mov w23, #1",
+          "0x97148fc adrp x1, #0x24c1000",
+          "0x9714900 add x1, x1, #0x8aa",
+          "0x9714904 add x0, x21, #8",
+          "0x9714908 mov w2, #0x14",
+          "0x971490c stur x8, [x29, #-8]",
+          "0x9714910 strb w23, [sp]",
+          "0x9714914 bl #0xe82f7a8",
+          "0x9714918 mov w8, #0x7b38",
+          "0x971491c add x22, x21, #0x28",
+          "0x9714920 strb w23, [sp, #0x28]",
+          "0x9714924 movk w8, #0xacb4, lsl #16",
+          "0x9714928 str w8, [sp, #0x20]",
+          "0x971492c adrp x1, #0x2758000",
+          "0x9714930 add x1, x1, #0x3d2"
+        ]
+      },
+      {
+        "xref": "0x9719e08",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9719df0 bl #0xe82f7a8",
+          "0x9719df4 mov w8, #0x4cce",
+          "0x9719df8 add x22, x21, #0x28",
+          "0x9719dfc strb w23, [sp, #0x30]",
+          "0x9719e00 movk w8, #0x9415, lsl #16",
+          "0x9719e04 str w8, [sp, #0x28]",
+          "0x9719e08 adrp x1, #0x24c1000",
+          "0x9719e0c add x1, x1, #0x8aa",
+          "0x9719e10 add x0, x21, #0x30",
+          "0x9719e14 mov w2, #0x14",
+          "0x9719e18 bl #0xe82f7a8",
+          "0x9719e1c mov w8, #0x7b38",
+          "0x9719e20 add x22, x21, #0x50",
+          "0x9719e24 strb w23, [sp, #0x58]",
+          "0x9719e28 movk w8, #0xacb4, lsl #16",
+          "0x9719e2c str w8, [sp, #0x50]",
+          "0x9719e30 adrp x1, #0x25fb000",
+          "0x9719e34 add x1, x1, #0xe01",
+          "0x9719e38 add x0, x21, #0x58",
+          "0x9719e3c mov w2, #0x13"
+        ]
+      },
+      {
+        "xref": "0x9750270",
+        "target": "0x27b7bcd",
+        "terms": [
+          "ActorUniqueID"
+        ],
+        "instructions": [
+          "0x9750258 add x24, sp, #8",
+          "0x975025c mov w25, #1",
+          "0x9750260 movk w8, #0x85b9, lsl #16",
+          "0x9750264 add x22, x24, #0x78",
+          "0x9750268 strb w25, [sp, #0x80]",
+          "0x975026c str w8, [sp, #0x78]",
+          "0x9750270 adrp x1, #0x27b7000",
+          "0x9750274 add x1, x1, #0xbcd",
+          "0x9750278 add x0, x24, #0x80",
+          "0x975027c mov w2, #0x16",
+          "0x9750280 bl #0xe82f7a8",
+          "0x9750284 mov w8, #0x57af",
+          "0x9750288 add x22, x24, #0xa0",
+          "0x975028c strb w25, [sp, #0xa8]",
+          "0x9750290 movk w8, #0x18f9, lsl #16",
+          "0x9750294 str w8, [sp, #0xa0]",
+          "0x9750298 adrp x1, #0x255f000",
+          "0x975029c add x1, x1, #0x2b4",
+          "0x97502a0 add x0, x24, #0xa8",
+          "0x97502a4 mov w2, #0x16"
+        ]
+      },
+      {
+        "xref": "0x97502c4",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x97502ac mov w8, #0x3816",
+          "0x97502b0 add x24, sp, #8",
+          "0x97502b4 strb w25, [sp, #0xd0]",
+          "0x97502b8 movk w8, #0xaf99, lsl #16",
+          "0x97502bc add x22, x24, #0xc8",
+          "0x97502c0 str w8, [sp, #0xc8]",
+          "0x97502c4 adrp x1, #0x2463000",
+          "0x97502c8 add x1, x1, #0x7f4",
+          "0x97502cc add x0, x24, #0xd0",
+          "0x97502d0 mov w2, #0x14",
+          "0x97502d4 bl #0xe82f7a8",
+          "0x97502d8 mov w8, #0x5238",
+          "0x97502dc add x22, x24, #0xf0",
+          "0x97502e0 strb w25, [sp, #0xf8]",
+          "0x97502e4 movk w8, #0x1b5d, lsl #16",
+          "0x97502e8 str w8, [sp, #0xf0]",
+          "0x97502ec adrp x1, #0x2502000",
+          "0x97502f0 add x1, x1, #0x715",
+          "0x97502f4 add x0, x24, #0xf8",
+          "0x97502f8 mov w2, #0x1b"
+        ]
+      },
+      {
+        "xref": "0x97664d8",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x97664c0 add x23, sp, #8",
+          "0x97664c4 mov w24, #1",
+          "0x97664c8 movk w8, #0xaf99, lsl #16",
+          "0x97664cc add x22, x23, #0x78",
+          "0x97664d0 strb w24, [sp, #0x80]",
+          "0x97664d4 str w8, [sp, #0x78]",
+          "0x97664d8 adrp x1, #0x2463000",
+          "0x97664dc add x1, x1, #0x7f4",
+          "0x97664e0 add x0, x23, #0x80",
+          "0x97664e4 mov w2, #0x14",
+          "0x97664e8 bl #0xe82f7a8",
+          "0x97664ec mov w8, #0x5238",
+          "0x97664f0 add x22, x23, #0xa0",
+          "0x97664f4 strb w24, [sp, #0xa8]",
+          "0x97664f8 movk w8, #0x1b5d, lsl #16",
+          "0x97664fc str w8, [sp, #0xa0]",
+          "0x9766500 adrp x1, #0x25fb000",
+          "0x9766504 add x1, x1, #0xe01",
+          "0x9766508 add x0, x23, #0xa8",
+          "0x976650c mov w2, #0x13"
+        ]
+      },
+      {
+        "xref": "0x98e09d4",
+        "target": "0x269c388",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x98e09bc stp x20, x19, [sp, #0xa0]",
+          "0x98e09c0 add x29, sp, #0x70",
+          "0x98e09c4 mrs x22, tpidr_el0",
+          "0x98e09c8 mov x20, x2",
+          "0x98e09cc mov x21, x1",
+          "0x98e09d0 ldr x8, [x22, #0x28]",
+          "0x98e09d4 adrp x1, #0x269c000",
+          "0x98e09d8 add x1, x1, #0x388",
+          "0x98e09dc add x0, sp, #8",
+          "0x98e09e0 mov w2, #0x27",
+          "0x98e09e4 mov x19, x3",
+          "0x98e09e8 stur x8, [x29, #-8]",
+          "0x98e09ec add x23, sp, #8",
+          "0x98e09f0 bl #0xe82f7a8",
+          "0x98e09f4 adrp x8, #0x1385c000",
+          "0x98e09f8 add x8, x8, #0xc28",
+          "0x98e09fc str x19, [sp, #0x40]",
+          "0x98e0a00 stp x8, x20, [sp, #0x30]",
+          "0x98e0a04 add x20, sp, #0x30",
+          "0x98e0a08 str x20, [sp, #0x50]"
+        ]
+      },
+      {
+        "xref": "0x98fea68",
+        "target": "0x25dd60f",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x98fea50 stp x20, x19, [sp, #0x80]",
+          "0x98fea54 add x29, sp, #0x60",
+          "0x98fea58 mrs x22, tpidr_el0",
+          "0x98fea5c mov x20, x2",
+          "0x98fea60 mov x21, x1",
+          "0x98fea64 ldr x8, [x22, #0x28]",
+          "0x98fea68 adrp x1, #0x25dd000",
+          "0x98fea6c add x1, x1, #0x60f",
+          "0x98fea70 add x0, sp, #8",
+          "0x98fea74 mov w2, #0x26",
+          "0x98fea78 mov x19, x3",
+          "0x98fea7c stur x8, [x29, #-8]",
+          "0x98fea80 bl #0xe82f7a8",
+          "0x98fea84 adrp x8, #0x13864000",
+          "0x98fea88 add x8, x8, #0x6e8",
+          "0x98fea8c str x19, [sp, #0x30]",
+          "0x98fea90 stp x8, x20, [sp, #0x20]",
+          "0x98fea94 add x20, sp, #0x20",
+          "0x98fea98 str x20, [sp, #0x40]",
+          "0x98fea9c add x1, sp, #8"
+        ]
+      },
+      {
+        "xref": "0x98fecf0",
+        "target": "0x257eeab",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x98fecd8 stp x20, x19, [sp, #0x80]",
+          "0x98fecdc add x29, sp, #0x60",
+          "0x98fece0 mrs x22, tpidr_el0",
+          "0x98fece4 mov x20, x2",
+          "0x98fece8 mov x21, x1",
+          "0x98fecec ldr x8, [x22, #0x28]",
+          "0x98fecf0 adrp x1, #0x257e000",
+          "0x98fecf4 add x1, x1, #0xeab",
+          "0x98fecf8 add x0, sp, #8",
+          "0x98fecfc mov w2, #0x2f",
+          "0x98fed00 mov x19, x3",
+          "0x98fed04 stur x8, [x29, #-8]",
+          "0x98fed08 bl #0xe82f7a8",
+          "0x98fed0c adrp x8, #0x13864000",
+          "0x98fed10 add x8, x8, #0x7e8",
+          "0x98fed14 str x19, [sp, #0x30]",
+          "0x98fed18 stp x8, x20, [sp, #0x20]",
+          "0x98fed1c add x20, sp, #0x20",
+          "0x98fed20 str x20, [sp, #0x40]",
+          "0x98fed24 add x1, sp, #8"
+        ]
+      },
+      {
+        "xref": "0x9b78ca8",
+        "target": "0x25bf011",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b78c90 ldr x8, [x21]",
+          "0x9b78c94 ldr x8, [x8, #0x508]",
+          "0x9b78c98 mov x0, x21",
+          "0x9b78c9c blr x8",
+          "0x9b78ca0 tbz w0, #0, #0x9b78e38",
+          "0x9b78ca4 mov w8, #1",
+          "0x9b78ca8 adrp x9, #0x25bf000",
+          "0x9b78cac add x9, x9, #0x11",
+          "0x9b78cb0 strb w8, [x21, #0x6e2]",
+          "0x9b78cb4 mov w8, #0x39",
+          "0x9b78cb8 adrp x10, #0x2810000",
+          "0x9b78cbc stp x9, x8, [sp, #8]",
+          "0x9b78cc0 adrp x8, #0x2502000",
+          "0x9b78cc4 add x8, x8, #0xf12",
+          "0x9b78cc8 mov w9, #0x48",
+          "0x9b78ccc ldr d0, [x10, #0x700]",
+          "0x9b78cd0 bfxil w25, w20, #0, #1",
+          "0x9b78cd4 stp x8, x9, [sp, #0x18]",
+          "0x9b78cd8 adrp x8, #0x142c6000",
+          "0x9b78cdc ldr x20, [x21, #0x610]"
+        ]
+      },
+      {
+        "xref": "0x9b78cc0",
+        "target": "0x2502f12",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b78ca8 adrp x9, #0x25bf000",
+          "0x9b78cac add x9, x9, #0x11",
+          "0x9b78cb0 strb w8, [x21, #0x6e2]",
+          "0x9b78cb4 mov w8, #0x39",
+          "0x9b78cb8 adrp x10, #0x2810000",
+          "0x9b78cbc stp x9, x8, [sp, #8]",
+          "0x9b78cc0 adrp x8, #0x2502000",
+          "0x9b78cc4 add x8, x8, #0xf12",
+          "0x9b78cc8 mov w9, #0x48",
+          "0x9b78ccc ldr d0, [x10, #0x700]",
+          "0x9b78cd0 bfxil w25, w20, #0, #1",
+          "0x9b78cd4 stp x8, x9, [sp, #0x18]",
+          "0x9b78cd8 adrp x8, #0x142c6000",
+          "0x9b78cdc ldr x20, [x21, #0x610]",
+          "0x9b78ce0 ldr x8, [x8, #0x670]",
+          "0x9b78ce4 mov w9, #0x3b1",
+          "0x9b78ce8 str d0, [sp, #0x38]",
+          "0x9b78cec str w9, [sp, #0x28]",
+          "0x9b78cf0 str x8, [sp, #0x30]",
+          "0x9b78cf4 strb wzr, [sp, #0x40]"
+        ]
+      },
+      {
+        "xref": "0x9b7ce30",
+        "target": "0x26babbe",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b7ce18 bl #0xe803424",
+          "0x9b7ce1c b #0x9b7d358",
+          "0x9b7ce20 add x0, sp, #0x28",
+          "0x9b7ce24 mov x1, x19",
+          "0x9b7ce28 mov x2, x21",
+          "0x9b7ce2c bl #0x9b7de7c",
+          "0x9b7ce30 adrp x8, #0x26ba000",
+          "0x9b7ce34 add x8, x8, #0xbbe",
+          "0x9b7ce38 mov w9, #0x5a",
+          "0x9b7ce3c stp x8, x9, [sp, #0x120]",
+          "0x9b7ce40 adrp x8, #0x2502000",
+          "0x9b7ce44 add x8, x8, #0xf12",
+          "0x9b7ce48 mov w9, #0x48",
+          "0x9b7ce4c adrp x10, #0x2810000",
+          "0x9b7ce50 ldr x24, [x19, #0x610]",
+          "0x9b7ce54 stp x8, x9, [sp, #0x130]",
+          "0x9b7ce58 adrp x8, #0x142c6000",
+          "0x9b7ce5c ldr d0, [x10, #0x700]",
+          "0x9b7ce60 ldr x8, [x8, #0x670]",
+          "0x9b7ce64 mov w9, #0x685"
+        ]
+      },
+      {
+        "xref": "0x9b7ce40",
+        "target": "0x2502f12",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b7ce28 mov x2, x21",
+          "0x9b7ce2c bl #0x9b7de7c",
+          "0x9b7ce30 adrp x8, #0x26ba000",
+          "0x9b7ce34 add x8, x8, #0xbbe",
+          "0x9b7ce38 mov w9, #0x5a",
+          "0x9b7ce3c stp x8, x9, [sp, #0x120]",
+          "0x9b7ce40 adrp x8, #0x2502000",
+          "0x9b7ce44 add x8, x8, #0xf12",
+          "0x9b7ce48 mov w9, #0x48",
+          "0x9b7ce4c adrp x10, #0x2810000",
+          "0x9b7ce50 ldr x24, [x19, #0x610]",
+          "0x9b7ce54 stp x8, x9, [sp, #0x130]",
+          "0x9b7ce58 adrp x8, #0x142c6000",
+          "0x9b7ce5c ldr d0, [x10, #0x700]",
+          "0x9b7ce60 ldr x8, [x8, #0x670]",
+          "0x9b7ce64 mov w9, #0x685",
+          "0x9b7ce68 stur w23, [x29, #-0xd0]",
+          "0x9b7ce6c adrp x23, #0x13891000",
+          "0x9b7ce70 add x23, x23, #0x598",
+          "0x9b7ce74 str w9, [sp, #0x140]"
+        ]
+      },
+      {
+        "xref": "0x9b7eed8",
+        "target": "0x26bac19",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b7eec0 ldr x8, [x8, #0x458]",
+          "0x9b7eec4 blr x8",
+          "0x9b7eec8 mov x2, x0",
+          "0x9b7eecc add x0, sp, #0x10",
+          "0x9b7eed0 mov x1, x20",
+          "0x9b7eed4 bl #0x9b7de7c",
+          "0x9b7eed8 adrp x8, #0x26ba000",
+          "0x9b7eedc add x8, x8, #0xc19",
+          "0x9b7eee0 mov w9, #0xa5",
+          "0x9b7eee4 stp x8, x9, [sp, #0x20]",
+          "0x9b7eee8 adrp x8, #0x2502000",
+          "0x9b7eeec add x8, x8, #0xf12",
+          "0x9b7eef0 mov w9, #0x48",
+          "0x9b7eef4 adrp x10, #0x2810000",
+          "0x9b7eef8 ldr x23, [x20, #0x610]",
+          "0x9b7eefc stp x8, x9, [sp, #0x30]",
+          "0x9b7ef00 adrp x8, #0x142c6000",
+          "0x9b7ef04 ldr d0, [x10, #0x700]",
+          "0x9b7ef08 ldp x25, x21, [sp, #0x10]",
+          "0x9b7ef0c ldr x8, [x8, #0x670]"
+        ]
+      },
+      {
+        "xref": "0x9b7eee8",
+        "target": "0x2502f12",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b7eed0 mov x1, x20",
+          "0x9b7eed4 bl #0x9b7de7c",
+          "0x9b7eed8 adrp x8, #0x26ba000",
+          "0x9b7eedc add x8, x8, #0xc19",
+          "0x9b7eee0 mov w9, #0xa5",
+          "0x9b7eee4 stp x8, x9, [sp, #0x20]",
+          "0x9b7eee8 adrp x8, #0x2502000",
+          "0x9b7eeec add x8, x8, #0xf12",
+          "0x9b7eef0 mov w9, #0x48",
+          "0x9b7eef4 adrp x10, #0x2810000",
+          "0x9b7eef8 ldr x23, [x20, #0x610]",
+          "0x9b7eefc stp x8, x9, [sp, #0x30]",
+          "0x9b7ef00 adrp x8, #0x142c6000",
+          "0x9b7ef04 ldr d0, [x10, #0x700]",
+          "0x9b7ef08 ldp x25, x21, [sp, #0x10]",
+          "0x9b7ef0c ldr x8, [x8, #0x670]",
+          "0x9b7ef10 mov w9, #0x6f8",
+          "0x9b7ef14 adrp x26, #0x13891000",
+          "0x9b7ef18 add x26, x26, #0x868",
+          "0x9b7ef1c str w9, [sp, #0x40]"
+        ]
+      },
+      {
+        "xref": "0x9b9ab20",
+        "target": "0x2443eb4",
+        "terms": [
+          "ClientInstance"
+        ],
+        "instructions": [
+          "0x9b9ab08 stp x22, x19, [sp, #0x28]",
+          "0x9b9ab0c add x22, x8, #0x10",
+          "0x9b9ab10 str x20, [sp, #0x38]",
+          "0x9b9ab14 bl #0xbcc7f60",
+          "0x9b9ab18 adrp x4, #0x2738000",
+          "0x9b9ab1c add x4, x4, #0x12e",
+          "0x9b9ab20 adrp x6, #0x2443000",
+          "0x9b9ab24 add x6, x6, #0xeb4",
+          "0x9b9ab28 and w3, w0, #1",
+          "0x9b9ab2c mov x0, x20",
+          "0x9b9ab30 mov w1, #1",
+          "0x9b9ab34 mov w2, wzr",
+          "0x9b9ab38 mov w5, #0x46",
+          "0x9b9ab3c mov w7, #0xe1",
+          "0x9b9ab40 bl #0x9bde69c",
+          "0x9b9ab44 stp xzr, xzr, [x22]",
+          "0x9b9ab48 cbz x19, #0x9b9aab8",
+          "0x9b9ab4c add x1, x19, #8",
+          "0x9b9ab50 mov x0, #-1",
+          "0x9b9ab54 bl #0x88973a0"
+        ]
+      },
+      {
+        "xref": "0x9bca2f0",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9bca2d8 add x29, sp, #0x170",
+          "0x9bca2dc mrs x20, tpidr_el0",
+          "0x9bca2e0 mov x19, x8",
+          "0x9bca2e4 mov x21, sp",
+          "0x9bca2e8 ldr x8, [x20, #0x28]",
+          "0x9bca2ec mov w23, #1",
+          "0x9bca2f0 adrp x1, #0x24c1000",
+          "0x9bca2f4 add x1, x1, #0x8aa",
+          "0x9bca2f8 add x0, x21, #8",
+          "0x9bca2fc mov w2, #0x14",
+          "0x9bca300 stur x8, [x29, #-8]",
+          "0x9bca304 strb w23, [sp]",
+          "0x9bca308 bl #0xe82f7a8",
+          "0x9bca30c mov w8, #0x7b38",
+          "0x9bca310 add x22, x21, #0x28",
+          "0x9bca314 strb w23, [sp, #0x28]",
+          "0x9bca318 movk w8, #0xacb4, lsl #16",
+          "0x9bca31c str w8, [sp, #0x20]",
+          "0x9bca320 adrp x1, #0x25fb000",
+          "0x9bca324 add x1, x1, #0xe01"
+        ]
+      },
+      {
+        "xref": "0x9c13a14",
+        "target": "0x269ca6e",
+        "terms": [
+          "getPosition"
+        ],
+        "instructions": [
+          "0x9c139fc stp q0, q0, [x0]",
+          "0x9c13a00 stp q0, q0, [x0, #0x20]",
+          "0x9c13a04 stp q0, q0, [x0, #0x40]",
+          "0x9c13a08 stp q0, q0, [x0, #0x60]",
+          "0x9c13a0c str q0, [x0, #0x80]",
+          "0x9c13a10 str x8, [x0]",
+          "0x9c13a14 adrp x1, #0x269c000",
+          "0x9c13a18 add x1, x1, #0xa6e",
+          "0x9c13a1c add x0, x22, #8",
+          "0x9c13a20 mov w2, #0x20",
+          "0x9c13a24 bl #0xe82f7a8",
+          "0x9c13a28 movi v0.2d, #0000000000000000",
+          "0x9c13a2c mov w8, #2",
+          "0x9c13a30 str wzr, [sp, #0x104]",
+          "0x9c13a34 strb w8, [sp, #0x100]",
+          "0x9c13a38 strb wzr, [sp, #0x108]",
+          "0x9c13a3c strh wzr, [sp, #0x110]",
+          "0x9c13a40 stur q0, [x25, #0x38]",
+          "0x9c13a44 stur q0, [x25, #0x48]",
+          "0x9c13a48 stur q0, [x25, #0x58]"
+        ]
+      },
+      {
+        "xref": "0x9c184bc",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c184a4 add x29, sp, #0xb0",
+          "0x9c184a8 mrs x20, tpidr_el0",
+          "0x9c184ac mov x19, x8",
+          "0x9c184b0 add x21, sp, #8",
+          "0x9c184b4 ldr x8, [x20, #0x28]",
+          "0x9c184b8 mov w23, #1",
+          "0x9c184bc adrp x1, #0x24c1000",
+          "0x9c184c0 add x1, x1, #0x8aa",
+          "0x9c184c4 add x0, x21, #8",
+          "0x9c184c8 mov w2, #0x14",
+          "0x9c184cc stur x8, [x29, #-8]",
+          "0x9c184d0 strb w23, [sp, #8]",
+          "0x9c184d4 bl #0xe82f7a8",
+          "0x9c184d8 mov w8, #0x7b38",
+          "0x9c184dc add x22, x21, #0x28",
+          "0x9c184e0 strb w23, [sp, #0x30]",
+          "0x9c184e4 movk w8, #0xacb4, lsl #16",
+          "0x9c184e8 str w8, [sp, #0x28]",
+          "0x9c184ec adrp x1, #0x26d9000",
+          "0x9c184f0 add x1, x1, #0xd7e"
+        ]
+      },
+      {
+        "xref": "0x9c20834",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c2081c sub sp, sp, #0x330",
+          "0x9c20820 mrs x20, tpidr_el0",
+          "0x9c20824 mov x19, x8",
+          "0x9c20828 add x21, sp, #8",
+          "0x9c2082c ldr x8, [x20, #0x28]",
+          "0x9c20830 mov w23, #1",
+          "0x9c20834 adrp x1, #0x24c1000",
+          "0x9c20838 add x1, x1, #0x8aa",
+          "0x9c2083c add x0, x21, #8",
+          "0x9c20840 mov w2, #0x14",
+          "0x9c20844 stur x8, [x29, #-8]",
+          "0x9c20848 strb w23, [sp, #8]",
+          "0x9c2084c bl #0xe82f7a8",
+          "0x9c20850 mov w8, #0x7b38",
+          "0x9c20854 add x22, x21, #0x28",
+          "0x9c20858 strb w23, [sp, #0x30]",
+          "0x9c2085c movk w8, #0xacb4, lsl #16",
+          "0x9c20860 str w8, [sp, #0x28]",
+          "0x9c20864 adrp x1, #0x24a3000",
+          "0x9c20868 add x1, x1, #0x6f2"
+        ]
+      },
+      {
+        "xref": "0x9c20964",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x9c2094c mov w8, #0x258f",
+          "0x9c20950 add x23, sp, #8",
+          "0x9c20954 strb w24, [sp, #0x120]",
+          "0x9c20958 movk w8, #0xf95d, lsl #16",
+          "0x9c2095c add x22, x23, #0x118",
+          "0x9c20960 str w8, [sp, #0x118]",
+          "0x9c20964 adrp x1, #0x2463000",
+          "0x9c20968 add x1, x1, #0x7f4",
+          "0x9c2096c add x0, x23, #0x120",
+          "0x9c20970 mov w2, #0x14",
+          "0x9c20974 bl #0xe82f7a8",
+          "0x9c20978 mov w8, #0x5238",
+          "0x9c2097c add x22, x23, #0x140",
+          "0x9c20980 strb w24, [sp, #0x148]",
+          "0x9c20984 movk w8, #0x1b5d, lsl #16",
+          "0x9c20988 str w8, [sp, #0x140]",
+          "0x9c2098c adrp x1, #0x24e0000",
+          "0x9c20990 add x1, x1, #0xb5f",
+          "0x9c20994 add x0, x23, #0x148",
+          "0x9c20998 mov w2, #0x16"
+        ]
+      },
+      {
+        "xref": "0x9c2102c",
+        "target": "0x2c6772c",
+        "terms": [
+          "getPosition"
+        ],
+        "instructions": [
+          "0x9c21014 ret ",
+          "0x9c21018 ret ",
+          "0x9c2101c b #0xe803424",
+          "0x9c21020 ldr x0, [x0, #8]",
+          "0x9c21024 b #0x10bdfa98",
+          "0x9c21028 ldr x8, [x1, #8]",
+          "0x9c2102c adrp x9, #0x2c67000",
+          "0x9c21030 add x9, x9, #0x72c",
+          "0x9c21034 add x10, x0, #8",
+          "0x9c21038 cmp x8, x9",
+          "0x9c2103c csel x0, x10, xzr, eq",
+          "0x9c21040 ret ",
+          "0x9c21044 adrp x0, #0x13899000",
+          "0x9c21048 add x0, x0, #0x970",
+          "0x9c2104c ret ",
+          "0x9c21050 b #0xe803424",
+          "0x9c21054 stp x29, x30, [sp, #-0x20]!",
+          "0x9c21058 str x19, [sp, #0x10]",
+          "0x9c2105c mov x29, sp",
+          "0x9c21060 mov x19, x0"
+        ]
+      },
+      {
+        "xref": "0x9c210b0",
+        "target": "0x2c67a79",
+        "terms": [
+          "getPosition"
+        ],
+        "instructions": [
+          "0x9c21098 ret ",
+          "0x9c2109c ret ",
+          "0x9c210a0 b #0xe803424",
+          "0x9c210a4 ldr x0, [x0, #8]",
+          "0x9c210a8 b #0x10bdfe30",
+          "0x9c210ac ldr x8, [x1, #8]",
+          "0x9c210b0 adrp x9, #0x2c67000",
+          "0x9c210b4 add x9, x9, #0xa79",
+          "0x9c210b8 add x10, x0, #8",
+          "0x9c210bc cmp x8, x9",
+          "0x9c210c0 csel x0, x10, xzr, eq",
+          "0x9c210c4 ret ",
+          "0x9c210c8 adrp x0, #0x13899000",
+          "0x9c210cc add x0, x0, #0xa00",
+          "0x9c210d0 ret ",
+          "0x9c210d4 stp x29, x30, [sp, #-0x50]!",
+          "0x9c210d8 stp x26, x25, [sp, #0x10]",
+          "0x9c210dc stp x24, x23, [sp, #0x20]",
+          "0x9c210e0 stp x22, x21, [sp, #0x30]",
+          "0x9c210e4 stp x20, x19, [sp, #0x40]"
+        ]
+      },
+      {
+        "xref": "0x9c25798",
+        "target": "0x2c68269",
+        "terms": [
+          "getPosition"
+        ],
+        "instructions": [
+          "0x9c25780 ret ",
+          "0x9c25784 ret ",
+          "0x9c25788 b #0xe803424",
+          "0x9c2578c ldr x0, [x0, #8]",
+          "0x9c25790 b #0x10bdfa98",
+          "0x9c25794 ldr x8, [x1, #8]",
+          "0x9c25798 adrp x9, #0x2c68000",
+          "0x9c2579c add x9, x9, #0x269",
+          "0x9c257a0 add x10, x0, #8",
+          "0x9c257a4 cmp x8, x9",
+          "0x9c257a8 csel x0, x10, xzr, eq",
+          "0x9c257ac ret ",
+          "0x9c257b0 adrp x0, #0x13899000",
+          "0x9c257b4 add x0, x0, #0xc90",
+          "0x9c257b8 ret ",
+          "0x9c257bc stp x29, x30, [sp, #-0x60]!",
+          "0x9c257c0 stp x28, x27, [sp, #0x10]",
+          "0x9c257c4 stp x26, x25, [sp, #0x20]",
+          "0x9c257c8 stp x24, x23, [sp, #0x30]",
+          "0x9c257cc stp x22, x21, [sp, #0x40]"
+        ]
+      },
+      {
+        "xref": "0x9c300d0",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c300b8 bl #0xe82f7a8",
+          "0x9c300bc mov w8, #0xe84f",
+          "0x9c300c0 add x22, x21, #0x28",
+          "0x9c300c4 strb w23, [sp, #0x28]",
+          "0x9c300c8 movk w8, #0x4434, lsl #16",
+          "0x9c300cc str w8, [sp, #0x20]",
+          "0x9c300d0 adrp x1, #0x24c1000",
+          "0x9c300d4 add x1, x1, #0x8aa",
+          "0x9c300d8 add x0, x21, #0x30",
+          "0x9c300dc mov w2, #0x14",
+          "0x9c300e0 bl #0xe82f7a8",
+          "0x9c300e4 mov w8, #0x7b38",
+          "0x9c300e8 add x22, x21, #0x50",
+          "0x9c300ec strb w23, [sp, #0x50]",
+          "0x9c300f0 movk w8, #0xacb4, lsl #16",
+          "0x9c300f4 str w8, [sp, #0x48]",
+          "0x9c300f8 adrp x1, #0x24e2000",
+          "0x9c300fc add x1, x1, #0x226",
+          "0x9c30100 add x0, x21, #0x58",
+          "0x9c30104 mov w2, #0xf"
+        ]
+      },
+      {
+        "xref": "0x9c325a0",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c32588 sub sp, sp, #0x1c0",
+          "0x9c3258c mrs x20, tpidr_el0",
+          "0x9c32590 mov x19, x8",
+          "0x9c32594 mov x21, sp",
+          "0x9c32598 ldr x8, [x20, #0x28]",
+          "0x9c3259c mov w23, #1",
+          "0x9c325a0 adrp x1, #0x24c1000",
+          "0x9c325a4 add x1, x1, #0x8aa",
+          "0x9c325a8 add x0, x21, #8",
+          "0x9c325ac mov w2, #0x14",
+          "0x9c325b0 stur x8, [x29, #-8]",
+          "0x9c325b4 strb w23, [sp]",
+          "0x9c325b8 bl #0xe82f7a8",
+          "0x9c325bc mov w8, #0x7b38",
+          "0x9c325c0 add x22, x21, #0x28",
+          "0x9c325c4 strb w23, [sp, #0x28]",
+          "0x9c325c8 movk w8, #0xacb4, lsl #16",
+          "0x9c325cc str w8, [sp, #0x20]",
+          "0x9c325d0 adrp x1, #0x2465000",
+          "0x9c325d4 add x1, x1, #0xc2"
+        ]
+      },
+      {
+        "xref": "0x9c34220",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c34208 sub sp, sp, #0x210",
+          "0x9c3420c mrs x20, tpidr_el0",
+          "0x9c34210 mov x19, x8",
+          "0x9c34214 mov x21, sp",
+          "0x9c34218 ldr x8, [x20, #0x28]",
+          "0x9c3421c mov w23, #1",
+          "0x9c34220 adrp x1, #0x24c1000",
+          "0x9c34224 add x1, x1, #0x8aa",
+          "0x9c34228 add x0, x21, #8",
+          "0x9c3422c mov w2, #0x14",
+          "0x9c34230 stur x8, [x29, #-8]",
+          "0x9c34234 strb w23, [sp]",
+          "0x9c34238 bl #0xe82f7a8",
+          "0x9c3423c mov w8, #0x7b38",
+          "0x9c34240 add x22, x21, #0x28",
+          "0x9c34244 strb w23, [sp, #0x28]",
+          "0x9c34248 movk w8, #0xacb4, lsl #16",
+          "0x9c3424c str w8, [sp, #0x20]",
+          "0x9c34250 adrp x1, #0x2465000",
+          "0x9c34254 add x1, x1, #0xc2"
+        ]
+      },
+      {
+        "xref": "0x9c41dc4",
+        "target": "0x261db0e",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c41dac add x8, x8, #0xcf8",
+          "0x9c41db0 str x0, [sp, #8]",
+          "0x9c41db4 stp q0, q0, [x0]",
+          "0x9c41db8 stp q0, q0, [x0, #0x20]",
+          "0x9c41dbc str q0, [x0, #0x40]",
+          "0x9c41dc0 str x8, [x0]",
+          "0x9c41dc4 adrp x1, #0x261d000",
+          "0x9c41dc8 add x1, x1, #0xb0e",
+          "0x9c41dcc add x0, x22, #8",
+          "0x9c41dd0 mov w2, #0x1a",
+          "0x9c41dd4 bl #0xe82f7a8",
+          "0x9c41dd8 movi v0.2d, #0000000000000000",
+          "0x9c41ddc mov w8, #6",
+          "0x9c41de0 str wzr, [sp, #0x2c]",
+          "0x9c41de4 strb w8, [sp, #0x28]",
+          "0x9c41de8 strb wzr, [sp, #0x30]",
+          "0x9c41dec strh wzr, [sp, #0x38]",
+          "0x9c41df0 stp q0, q0, [sp, #0x40]",
+          "0x9c41df4 stp q0, q0, [sp, #0x60]",
+          "0x9c41df8 stur q0, [sp, #0x80]"
+        ]
+      },
+      {
+        "xref": "0x9c60520",
+        "target": "0x24c18aa",
+        "terms": [
+          "LocalPlayer"
+        ],
+        "instructions": [
+          "0x9c60508 sub sp, sp, #0x3a0",
+          "0x9c6050c mrs x20, tpidr_el0",
+          "0x9c60510 mov x19, x8",
+          "0x9c60514 mov x21, sp",
+          "0x9c60518 ldr x8, [x20, #0x28]",
+          "0x9c6051c mov w23, #1",
+          "0x9c60520 adrp x1, #0x24c1000",
+          "0x9c60524 add x1, x1, #0x8aa",
+          "0x9c60528 add x0, x21, #8",
+          "0x9c6052c mov w2, #0x14",
+          "0x9c60530 stur x8, [x29, #-8]",
+          "0x9c60534 strb w23, [sp]",
+          "0x9c60538 bl #0xe82f7a8",
+          "0x9c6053c mov w8, #0x7b38",
+          "0x9c60540 add x22, x21, #0x28",
+          "0x9c60544 strb w23, [sp, #0x28]",
+          "0x9c60548 movk w8, #0xacb4, lsl #16",
+          "0x9c6054c str w8, [sp, #0x20]",
+          "0x9c60550 adrp x1, #0x24e1000",
+          "0x9c60554 add x1, x1, #0xa74"
+        ]
+      },
+      {
+        "xref": "0x9c606f8",
+        "target": "0x24637f4",
+        "terms": [
+          "StateVectorComponent"
+        ],
+        "instructions": [
+          "0x9c606e0 mov w8, #0x332c",
+          "0x9c606e4 mov x23, sp",
+          "0x9c606e8 strb w24, [sp, #0x1b8]",
+          "0x9c606ec movk w8, #0x8918, lsl #16",
+          "0x9c606f0 add x22, x23, #0x1b8",
+          "0x9c606f4 str w8, [sp, #0x1b0]",
+          "0x9c606f8 adrp x1, #0x2463000",
+          "0x9c606fc add x1, x1, #0x7f4",
+          "0x9c60700 add x0, x23, #0x1c0",
+          "0x9c60704 mov w2, #0x14",
+          "0x9c60708 bl #0xe82f7a8",
+          "0x9c6070c mov w8, #0x5238",
+          "0x9c60710 add x22, x23, #0x1e0",
+          "0x9c60714 strb w24, [sp, #0x1e0]",
+          "0x9c60718 movk w8, #0x1b5d, lsl #16",
+          "0x9c6071c str w8, [sp, #0x1d8]",
+          "0x9c60720 adrp x1, #0x26da000",
+          "0x9c60724 add x1, x1, #0x5be",
+          "0x9c60728 add x0, x23, #0x1e8",
+          "0x9c6072c mov w2, #0xf"
+        ]
+      }
+    ],
+    "limitations": [
+      "ADRP+ADD pairs are static reference candidates, not verified callable game functions.",
+      "Class-name strings or RTTI do not establish player fields, projection matrices or function ABI.",
+      "No offsets are approved for injection; an on-device diagnostic test is still needed.",
+      "Only a bounded sample of each anchor is scanned; absence of candidates is not proof that a function is absent."
+    ],
+    "status": "static deep analysis completed"
+  }
+}
