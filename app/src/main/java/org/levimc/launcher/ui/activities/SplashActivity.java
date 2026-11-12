@@ -292,7 +292,7 @@ public class SplashActivity extends BaseActivity {
             .alpha(0f)
             .setDuration(300)
             .withEndAction(() -> {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, org.levimc.launcher.nemesis.NemesisActivity.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

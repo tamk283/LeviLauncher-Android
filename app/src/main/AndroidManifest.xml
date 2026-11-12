@@ -82,6 +82,13 @@
         </activity>
 
         <activity
+            android:name="org.levimc.launcher.nemesis.NemesisActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/MainActivityTheme" />
+
+        <activity
             android:name="org.levimc.launcher.ui.activities.MainActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"

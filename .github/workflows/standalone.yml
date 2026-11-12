@@ -51,6 +51,8 @@ jobs:
           }
           Path('app/google-services.json').write_text(json.dumps(data))
           PY
+      - name: Check Nemesis integration
+        run: python3 scripts/check_nemesis.py
       - name: Build debug APK without Discord SDK
         run: |
           chmod +x gradlew
@@ -78,4 +80,4 @@ jobs:
         run: |
           set -euo pipefail
           cp app/build/outputs/apk/debug/app-debug.apk Nemesis-debug.apk
-          gh release create "nemesis-build-${{ github.run_number }}" Nemesis-debug.apk --target "${{ github.sha }}" --prerelease --title "Nemesis test build ${{ github.run_number }}" --notes 'Nemesis launcher: redesigned home screen and branding. Based on LeviLauncher Android; Apache-2.0 license and upstream credits retained. No ESP yet. Minecraft authentication is unchanged. Physical-device testing pending.'
+          gh release create "nemesis-build-${{ github.run_number }}" Nemesis-debug.apk --target "${{ github.sha }}" --prerelease --title "Nemesis test build ${{ github.run_number }}" --notes 'Nemesis Android: packaged animated HTML launcher and in-game client menu, native Microsoft login and installed/imported version launch, bridge to upstream Auto Sprint, Zoom, FPS/CPS, Gyro, Camera and HUD modules. ESP/Tracers/Name Tags/Fullbright/Aim/Trigger/Step remain unavailable. Minecraft is not included. Compatibility with 26.53 and physical-device testing pending. Apache-2.0 upstream credits retained.'

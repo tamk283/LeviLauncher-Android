@@ -41,6 +41,7 @@ class MinecraftActivity : MainActivity(), PojavControlsHost {
     private lateinit var gameManager: GamePackageManager
     private lateinit var trace: LaunchTrace
     private var overlayManager: InbuiltOverlayManager? = null
+    private var nemesisOverlay: org.levimc.launcher.nemesis.NemesisGameOverlay? = null
     private var normalExitPrepared = false
     private var normalExitRestartScheduled = false
     private var gameRuntimeStarted = false
@@ -288,6 +289,9 @@ class MinecraftActivity : MainActivity(), PojavControlsHost {
         if (overlayManager == null) {
             startInbuiltModServices()
         }
+        if (nemesisOverlay == null) {
+            nemesisOverlay = org.levimc.launcher.nemesis.NemesisGameOverlay(this)
+        }
     }
 
     private fun isMouseSource(source: Int): Boolean {
@@ -498,6 +502,8 @@ class MinecraftActivity : MainActivity(), PojavControlsHost {
     }
 
     override fun onDestroy() {
+        nemesisOverlay?.destroy()
+        nemesisOverlay = null
         PreloaderInput.cancelDocumentRequest("Minecraft closed")
         ModManager.disableAndUnloadLoadedMods()
         val shouldPrepareNormalExit = shouldRestartAfterNormalExit()
