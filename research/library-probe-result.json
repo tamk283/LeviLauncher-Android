@@ -1,0 +1,12 @@
+{
+  "source": "https://mcpehub.org/engine/dlfile.php?id=56139",
+  "expected_version": "26.60.28",
+  "game_code_executed": false,
+  "download_host": "mcpehub.org",
+  "content_type": "text/html; charset=UTF-8",
+  "content_disposition": null,
+  "apk_size": 6644,
+  "apk_sha256": "07b379eb5166b057641dd0a66306c9c54ce36a2502e8e79c96d96fb8965fcf26",
+  "status": "inspection failed",
+  "error": "RuntimeError: The endpoint did not return an APK/ZIP (possibly a challenge page)"
+}
