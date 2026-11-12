@@ -1,0 +1,28 @@
+name: Read native library inspection result
+on:
+  push:
+    branches: [native-research-26.60.28]
+    paths: ['.github/workflows/read-native-report.yml']
+permissions:
+  actions: read
+  contents: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Retrieve sanitized download diagnostics
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh run download 43308316737 --name minecraft-26.60.28-native-inspection --dir probe
+          python3 - <<'PY'
+          import pathlib,json,base64
+          data=json.loads(pathlib.Path('probe/report.json').read_text())
+          data.pop('response_preview',None)
+          text=json.dumps(data,ensure_ascii=False,indent=2)
+          request={'message':'Save sanitized native library probe result [skip ci]','branch':'native-research-26.60.28','content':base64.b64encode(text.encode()).decode()}
+          pathlib.Path('request.json').write_text(json.dumps(request))
+          PY
+          gh api "repos/$GH_REPO/contents/research/library-probe-result.json" --method PUT --input request.json
