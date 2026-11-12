@@ -1,12 +1,25 @@
 {
-  "source": "https://mcpehub.org/engine/dlfile.php?id=56139",
+  "source": "https://mcpehub.org/engine/getfile.php?id=56139",
+  "source_page": "https://mcpehub.org/engine/dlfile.php?id=56139",
   "expected_version": "26.60.28",
   "game_code_executed": false,
   "download_host": "mcpehub.org",
-  "content_type": "text/html; charset=UTF-8",
-  "content_disposition": null,
-  "apk_size": 6644,
-  "apk_sha256": "07b379eb5166b057641dd0a66306c9c54ce36a2502e8e79c96d96fb8965fcf26",
-  "status": "inspection failed",
-  "error": "RuntimeError: The endpoint did not return an APK/ZIP (possibly a challenge page)"
+  "content_type": "application/vnd.android.package-archive",
+  "content_disposition": "attachment; filename=\"minecraft-26-60-28-arm64-v8a-xbox-servers.apk\"",
+  "apk_size": 1066092051,
+  "apk_sha256": "be240c0d0ea5868c3e13e87a519b2316761a6e44c3bc9dc7b4062d776ff8c1e8",
+  "package_metadata": "package: name='com.mojang.minecraftpe' versionCode='972606028' versionName='1.26.60.28' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+  "version_verification": "matches expected version prefix",
+  "native_library_paths": [
+    "lib/arm64-v8a/libminecraftpe.so"
+  ],
+  "library_sha256": "a7f8d05166aa1101c3cb2271d1fc67164d56287612c56af5d478925e9b8eb04b",
+  "library_size": 368150880,
+  "library_architecture": "AArch64 / arm64-v8a",
+  "exported_symbol_count": 90665,
+  "candidate_symbol_count": 0,
+  "candidate_preview": [],
+  "status": "library extracted and inspected; APK not executed",
+  "trust_warning": "Third-party APK. Hashes identify the file but do not prove official authenticity. Not installed or executed.",
+  "retention": "Only metadata and candidate-symbol reports are published; no proprietary APK or library."
 }
