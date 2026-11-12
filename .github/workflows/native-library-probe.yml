@@ -5,7 +5,7 @@ on:
     paths: ['.github/workflows/native-library-probe.yml']
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   inspect:
     runs-on: ubuntu-latest
@@ -15,92 +15,78 @@ jobs:
         shell: bash
         run: |
           mkdir -p probe
-          python3 - <<'PY'
-          import os, sys, json, hashlib, zipfile, struct, subprocess, pathlib, urllib.request, urllib.parse, http.cookiejar, glob, shutil
-          root = pathlib.Path('probe')
-          report = {'source': 'https://mcpehub.org/engine/dlfile.php?id=56139', 'expected_version': '26.60.28', 'game_code_executed': False}
+          python3 -u - <<'PY'
+          import os,sys,json,hashlib,zipfile,struct,subprocess,pathlib,urllib.request,urllib.parse,http.cookiejar,glob,shutil,time
+          root=pathlib.Path('probe')
+          report={'source':'https://mcpehub.org/engine/getfile.php?id=56139','source_page':'https://mcpehub.org/engine/dlfile.php?id=56139','expected_version':'26.60.28','game_code_executed':False}
           def save():
-              (root/'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2))
-              text = '# Minecraft native library inspection\n\n' + '```json\n' + json.dumps(report, ensure_ascii=False, indent=2) + '\n```\n'
-              (root/'report.md').write_text(text)
+              text=json.dumps(report,ensure_ascii=False,indent=2)
+              (root/'report.json').write_text(text)
+              (root/'report.md').write_text('# Native library inspection\n\n```json\n'+text+'\n```\n')
               if os.environ.get('GITHUB_STEP_SUMMARY'):
-                  with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f: f.write(text)
+                  with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write((root/'report.md').read_text())
           try:
-              headers = {'User-Agent': 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36', 'Referer': 'https://mcpehub.org/download-mcpe/16117-minecraft-26-60-28.html'}
-              opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-              try:
-                  req = urllib.request.Request(headers['Referer'], headers=headers)
-                  with opener.open(req, timeout=40) as response: response.read(2_000_000)
-              except Exception as error: report['page_warmup'] = type(error).__name__
-              req = urllib.request.Request(report['source'], headers=headers)
-              apk = pathlib.Path('target.apk')
-              digest = hashlib.sha256(); total = 0
-              with opener.open(req, timeout=90) as response:
-                  final = urllib.parse.urlsplit(response.url)
-                  report['download_host'] = final.hostname
-                  report['content_type'] = response.headers.get('Content-Type')
-                  report['content_disposition'] = response.headers.get('Content-Disposition')
+              headers={'User-Agent':'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36','Referer':report['source_page']}
+              opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+              with opener.open(urllib.request.Request(report['source_page'],headers=headers),timeout=40) as r:r.read(2000000)
+              time.sleep(3)
+              apk=pathlib.Path('target.apk');digest=hashlib.sha256();total=0
+              with opener.open(urllib.request.Request(report['source'],headers=headers),timeout=120) as response:
+                  report['download_host']=urllib.parse.urlsplit(response.url).hostname
+                  report['content_type']=response.headers.get('Content-Type')
+                  report['content_disposition']=response.headers.get('Content-Disposition')
                   with apk.open('wb') as output:
                       while True:
-                          chunk = response.read(1024*1024)
-                          if not chunk: break
-                          total += len(chunk)
-                          if total > 1024*1024*1024: raise RuntimeError('Download exceeds 1 GiB inspection limit')
-                          digest.update(chunk); output.write(chunk)
-              report['apk_size'] = total; report['apk_sha256'] = digest.hexdigest()
-              if not zipfile.is_zipfile(apk):
-                  report['response_preview'] = apk.read_bytes()[:400].decode('utf-8', 'replace')
-                  raise RuntimeError('The endpoint did not return an APK/ZIP (possibly a challenge page)')
-              with zipfile.ZipFile(apk) as archive:
-                  native = [n for n in archive.namelist() if n.endswith('/libminecraftpe.so')]
-                  report['native_library_paths'] = native
-                  target = 'lib/arm64-v8a/libminecraftpe.so'
-                  if target not in native: raise RuntimeError('No ARM64 libminecraftpe.so in this archive; a split APK may be needed')
-                  info = archive.getinfo(target)
-                  if info.file_size > 1024*1024*1024: raise RuntimeError('Native library exceeds 1 GiB limit')
-                  lib = pathlib.Path('libminecraftpe.so'); library_digest = hashlib.sha256()
-                  with archive.open(target) as source, lib.open('wb') as output:
-                      while True:
-                          chunk = source.read(1024*1024)
-                          if not chunk: break
-                          library_digest.update(chunk); output.write(chunk)
-              with lib.open('rb') as f: elf = f.read(64)
-              if elf[:4] != b'\x7fELF' or elf[4] != 2 or elf[5] != 1 or struct.unpack_from('<H', elf, 18)[0] != 183:
-                  raise RuntimeError('Library is not a 64-bit little-endian AArch64 ELF')
-              report['library_sha256'] = library_digest.hexdigest()
-              report['library_size'] = lib.stat().st_size
-              report['library_architecture'] = 'AArch64 / arm64-v8a'
-              sdk = os.environ.get('ANDROID_HOME') or os.environ.get('ANDROID_SDK_ROOT') or '/usr/local/lib/android/sdk'
-              tools = sorted(glob.glob(sdk+'/build-tools/*/aapt2'), reverse=True)
-              aapt = shutil.which('aapt2') or (tools[0] if tools else None)
+                          chunk=response.read(1024*1024)
+                          if not chunk:break
+                          total+=len(chunk)
+                          if total>1536*1024*1024:raise RuntimeError('APK exceeds 1.5 GiB limit')
+                          digest.update(chunk);output.write(chunk)
+                          if total%(64*1024*1024)==0:print('Downloaded MiB:',total//1024//1024,flush=True)
+              report['apk_size']=total;report['apk_sha256']=digest.hexdigest()
+              if not zipfile.is_zipfile(apk):raise RuntimeError('Download endpoint returned a non-APK response')
+              sdk=os.environ.get('ANDROID_HOME') or os.environ.get('ANDROID_SDK_ROOT') or '/usr/local/lib/android/sdk'
+              tools=sorted(glob.glob(sdk+'/build-tools/*/aapt2'),reverse=True)
+              aapt=shutil.which('aapt2') or (tools[0] if tools else None)
               if aapt:
-                  result = subprocess.run([aapt, 'dump', 'badging', str(apk)], capture_output=True, text=True, timeout=90)
+                  result=subprocess.run([aapt,'dump','badging',str(apk)],capture_output=True,text=True,timeout=90)
                   (root/'apk-badging.txt').write_text(result.stdout[:200000]+'\n'+result.stderr[:2000])
-                  package = next((line for line in result.stdout.splitlines() if line.startswith('package:')), '')
-                  report['package_metadata'] = package
-                  if not package: report['version_verification'] = 'unverified: aapt2 did not read package metadata'
-                  elif "name='com.mojang.minecraftpe'" not in package: raise RuntimeError('Unexpected Android package identifier')
-                  elif "versionName='26.60.28" in package or "versionName='1.26.60.28" in package: report['version_verification'] = 'matches expected version prefix'
-                  else: report['version_verification'] = 'MISMATCH: inspect the package version before using this library'
-              else: report['version_verification'] = 'unverified: aapt2 unavailable'
-              result = subprocess.run(['readelf', '-h', str(lib)], capture_output=True, text=True, timeout=60)
-              (root/'elf-header.txt').write_text(result.stdout)
-              nm = subprocess.run(['nm', '-D', '--defined-only', '-C', str(lib)], capture_output=True, text=True, timeout=180)
-              symbols = nm.stdout.splitlines()
-              report['exported_symbol_count'] = len(symbols)
-              terms = ['LocalPlayer', 'ClientInstance', 'LevelRenderer', 'getRuntimeID', 'getPosition', 'getActor', 'getEntity', 'getLevel', 'worldToScreen', 'getFov', 'setSprinting', 'getNameTag', 'ScreenContext', 'ActorRender']
-              matches = [line for line in symbols if any(term in line for term in terms)]
+                  package=next((line for line in result.stdout.splitlines() if line.startswith('package:')),'')
+                  report['package_metadata']=package
+                  if not package:report['version_verification']='unverified: package metadata unavailable'
+                  elif "name='com.mojang.minecraftpe'" not in package:raise RuntimeError('Unexpected package identifier')
+                  elif "versionName='26.60.28" in package or "versionName='1.26.60.28" in package:report['version_verification']='matches expected version prefix'
+                  else:raise RuntimeError('Package version does not match target 26.60.28')
+              else:report['version_verification']='unverified: aapt2 unavailable'
+              with zipfile.ZipFile(apk) as archive:
+                  report['native_library_paths']=[n for n in archive.namelist() if n.endswith('/libminecraftpe.so')]
+                  target='lib/arm64-v8a/libminecraftpe.so'
+                  if target not in archive.namelist():raise RuntimeError('No ARM64 library in this APK')
+                  if archive.getinfo(target).file_size>2*1024*1024*1024:raise RuntimeError('Library exceeds 2 GiB limit')
+                  lib=pathlib.Path('libminecraftpe.so');digest=hashlib.sha256()
+                  with archive.open(target) as source,lib.open('wb') as output:
+                      while True:
+                          chunk=source.read(1024*1024)
+                          if not chunk:break
+                          digest.update(chunk);output.write(chunk)
+              with lib.open('rb') as f:elf=f.read(64)
+              if elf[:4]!=b'\x7fELF' or elf[4]!=2 or elf[5]!=1 or struct.unpack_from('<H',elf,18)[0]!=183:raise RuntimeError('Library is not an AArch64 ELF')
+              report['library_sha256']=digest.hexdigest();report['library_size']=lib.stat().st_size;report['library_architecture']='AArch64 / arm64-v8a'
+              elf_info=subprocess.run(['readelf','-h',str(lib)],capture_output=True,text=True,timeout=60)
+              (root/'elf-header.txt').write_text(elf_info.stdout)
+              nm=subprocess.run(['nm','-D','--defined-only','-C',str(lib)],capture_output=True,text=True,timeout=180)
+              symbols=nm.stdout.splitlines();report['exported_symbol_count']=len(symbols)
+              terms=['LocalPlayer','ClientInstance','LevelRenderer','getRuntimeID','getPosition','getActor','getEntity','getLevel','worldToScreen','getFov','setSprinting','getNameTag','ScreenContext','ActorRender']
+              matches=[line for line in symbols if any(term in line for term in terms)]
               (root/'candidate-symbols.txt').write_text('\n'.join(matches[:10000]))
-              report['candidate_symbol_count'] = len(matches)
-              report['candidate_preview'] = matches[:40]
-              report['status'] = 'library extracted and inspected; APK not installed or executed'
-              report['trust_warning'] = 'Third-party APK. Hash is identification, not proof of authenticity. No official signing-certificate verification was performed.'
-              report['retention'] = 'Only metadata and symbol reports are uploaded, not the proprietary APK or library.'
-              save(); print(json.dumps(report, ensure_ascii=False, indent=2))
+              report['candidate_symbol_count']=len(matches);report['candidate_preview']=matches[:40]
+              report['status']='library extracted and inspected; APK not executed'
+              report['trust_warning']='Third-party APK. Hashes identify the file but do not prove official authenticity. Not installed or executed.'
+              report['retention']='Only metadata and candidate-symbol reports are published; no proprietary APK or library.'
+              save();print(json.dumps(report,ensure_ascii=False,indent=2))
           except Exception as error:
-              report['status'] = 'inspection failed'
-              report['error'] = type(error).__name__ + ': ' + str(error)
-              save(); print(json.dumps(report, ensure_ascii=False, indent=2)); sys.exit(1)
+              report['status']='inspection failed';report['error']=type(error).__name__+': '+str(error)
+              save();print(json.dumps(report,ensure_ascii=False,indent=2));sys.exit(1)
           PY
       - name: Upload inspection report (no game binaries)
         if: always()
@@ -109,3 +95,20 @@ jobs:
           name: minecraft-26.60.28-native-inspection
           path: probe/
           retention-days: 7
+      - name: Save sanitized result for source review
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          test -f probe/report.json || exit 0
+          export REPORT_SHA="$(gh api "repos/$GH_REPO/contents/research/library-probe-result.json?ref=native-research-26.60.28" --jq .sha 2>/dev/null || true)"
+          python3 - <<'PY'
+          import pathlib,json,base64,os
+          report=json.loads(pathlib.Path('probe/report.json').read_text())
+          report.pop('response_preview',None)
+          request={'message':'Save native library inspection result [skip ci]','branch':'native-research-26.60.28','content':base64.b64encode(json.dumps(report,ensure_ascii=False,indent=2).encode()).decode()}
+          if os.environ.get('REPORT_SHA'):request['sha']=os.environ['REPORT_SHA']
+          pathlib.Path('request.json').write_text(json.dumps(request))
+          PY
+          gh api "repos/$GH_REPO/contents/research/library-probe-result.json" --method PUT --input request.json
