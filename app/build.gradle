@@ -189,7 +189,7 @@ android {
 }
 
 dependencies {
-    implementation files('libs/discord_partner_sdk.aar')
+    // Fork: proprietary Discord SDK integration removed.
     implementation project(':minecraft')
     implementation project(':pojav_controls')
     implementation libs.commonmark
@@ -222,4 +222,9 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     implementation libs.glide
+}
+
+// Do not upload diagnostics from fork builds.
+tasks.configureEach {
+    if (name.startsWith("uploadCrashlytics")) enabled = false
 }

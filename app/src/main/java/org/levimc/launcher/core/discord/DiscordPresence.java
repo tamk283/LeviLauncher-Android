@@ -9,7 +9,6 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Process;
 
-import com.discord.socialsdk.DiscordSocialSdkInit;
 
 import org.levimc.launcher.BuildConfig;
 import org.levimc.launcher.core.minecraft.MinecraftActivity;
@@ -52,7 +51,8 @@ public final class DiscordPresence implements Application.ActivityLifecycleCallb
     }
 
     public static boolean isConfigured() {
-        return BuildConfig.DISCORD_APPLICATION_ID > 0;
+        // Discord integration is disabled in this fork.
+        return false;
     }
 
     public static void refresh() {
@@ -250,7 +250,6 @@ public final class DiscordPresence implements Application.ActivityLifecycleCallb
             worker.post(() -> {
                 if (!active) return;
                 try {
-                    DiscordSocialSdkInit.setEngineActivity(activity);
                     if (!NativeBridgeHelper.ensureGxCoreLoaded()) {
                         throw new UnsatisfiedLinkError("GXCore is unavailable");
                     }
